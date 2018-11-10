@@ -3,17 +3,31 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
+import Img from "gatsby-image"
+import Header from '../components/header'
+import {graphql} from 'gatsby'
 
-const IndexPage = () => (
+const IndexPage = (data) => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    {/* {console.log(data.data.file.childImageSharp.fixed)} */}
+    {/* <Img fixed={data.data.file.childImageSharp.fixed} /> */}
     <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
     <Link to="/page-2/">Go to page 2</Link>
+    {/* {console.log(data.data.file.childImageSharp.fixed)} */}
+ 
   </Layout>
 )
+
+export const indexQuery = graphql`
+  query IndexQuery {
+    file(relativePath: { eq: "headerImage.png" }) {
+      childImageSharp {
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

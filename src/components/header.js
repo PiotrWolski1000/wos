@@ -1,33 +1,43 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+import styled from 'styled-components'
+import Img from "gatsby-image"
+import {StaticQuery, graphql} from 'gatsby'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+const Wrapper = styled.div`
+  display: block;
+  height: 175px;
+  width: 100%;
+  color: #707070;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 13px grey;
+`
+
+const LogoImg = styled(Img)`
+  margin: 25px;
+`
+
+const Header = () => (
+  <StaticQuery
+    query = {graphql`
+    query HeaderQuery {
+      file(relativePath: { eq: "headerImage.png" }) {
+        childImageSharp {
+          fixed(width: 125, height: 125) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+    `}
+    render = { data => (
+      <Wrapper className="header">
+        <LogoImg fixed={data.file.childImageSharp.fixed} />
+      </Wrapper>
+      ) 
+    }
+    
+  />
 )
 
 export default Header
