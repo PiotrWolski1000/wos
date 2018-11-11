@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -18,7 +18,7 @@ const InselImg = styled(Img)`
 `
 const Content = styled.div`
     width: 40%;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,19 +26,35 @@ const Content = styled.div`
 `
 const Button1 = styled.button`
     all: initial;
-    width: 300px;
-    height: 100px;
-    background-color: red;
+    width: 412px;
+    height: 77px;
+    background-color: #E52321;
     margin: 50px;
+    border-radius: 45px;
+    text-align: center;
+    color: white;    
+
 
 `
 const Button2 = styled.button`
     all: initial;
-    width: 300px;
-    height: 100px;
-    background-color: red;
+    width: 412px;
+    height: 77px;
+    background-color: #E52321;
     margin: 50px;
-    
+    border-radius: 45px;
+    text-align: center;
+    color: white;    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+`
+const WhiteCircle = styled.div`
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: white;
+
 `
 
 const Insel = () => (
@@ -64,8 +80,16 @@ const Insel = () => (
                     decken die gesamte Insel
                     Föhr ab.
                 </p>
-                <Button1/>
-                <Button2/>
+                <Button1>
+                    <WhiteCircle>
+
+                    </WhiteCircle>
+                    <div>
+                        Kontakt uns
+                    </div>
+                </Button1>
+
+                <Button2>Prüfen Sie unser Angebot</Button2>
             </Content>
         </Wrapper>
     )}
