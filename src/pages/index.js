@@ -7,6 +7,7 @@ import MainText from '../components/MainText'
 import Image from '../components/image'
 import Img from "gatsby-image"
 import {graphql} from 'gatsby'
+import Insel from '../components/Insel'
 
 const IndexPage = (data) => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = (data) => (
     {/* <Img fixed={data.data.file.childImageSharp.fixed} /> */}
     <MainImage></MainImage>
     <MainText></MainText>
+    <Insel></Insel>
     <Link to="/page-2/">Go to page 2</Link>
     {/* {console.log(data.data.file.childImageSharp.fixed)} */}
  
