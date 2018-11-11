@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   width: 100%;
   color: #707070;
   background-color: #FFFFFF;
-  box-shadow: 0px 1px 13px grey;
+  box-shadow: 0px 1px 1px grey;
 `
 
 const LogoImg = styled(Img)`
