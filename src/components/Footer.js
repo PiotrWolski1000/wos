@@ -101,7 +101,7 @@ const Footer = (data) => (
     </LightUp>
     <DarkBottom>
       {console.log(window.location.href)}
-    © {new Date().getFullYear()} WoS Hausmeister Service auf Föhr
+    © {(typeof window)? new Date().getFullYear():''} WoS Hausmeister Service auf Föhr
     </DarkBottom>
   </Wrapper>
 )
