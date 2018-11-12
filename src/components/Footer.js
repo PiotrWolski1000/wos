@@ -100,7 +100,7 @@ const Footer = (data) => (
       </ContentWrapper>
     </LightUp>
     <DarkBottom>
-      {console.log(window.location.href)}
+      {/* {console.log(window.location.href)} */}
     © {(typeof window)? new Date().getFullYear():''} WoS Hausmeister Service auf Föhr
     </DarkBottom>
   </Wrapper>
