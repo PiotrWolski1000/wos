@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `
 
 const InselImg = styled(Img)`
-    margin-right: 5%;
+    /* margin-right: 5%; */
     width: 50%;
    
     @media (max-width: 768px) {
@@ -26,12 +26,19 @@ const InselImg = styled(Img)`
 `
 const Content = styled.div`
     width: 40%;
-    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    p {
+        margin: 2em 0 2em 0;
+        color: #707070;
+        font-family: Segoe UI;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
     @media (max-width: 768px) {
+        text-indent: 1rem;
         width: 80%;
     }
 
@@ -41,14 +48,16 @@ const Button1 = styled.button`
     max-width: 412px;
     height: 50px;
     background-color: #E52321;
-    margin: 50px;
-    border-radius: 45px;
+    /* margin: 50px; */
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: white;   
     text-align: center;
     
+    font-size: 1.3rem;
+
     @media (max-width: 768px) {
         width: 100%;
         
@@ -61,9 +70,9 @@ const Button2 = styled.button`
     max-width: 412px;
     height: 50px;
     background-color: #E52321;
-    margin: 50px;
-    border-radius: 45px;
-    text-align: center;
+    /* margin: 50px; */
+    border-radius: 20px;
+    /* text-align: center; */
     color: white;    
     @media (max-width: 768px) {
         width: 100%;

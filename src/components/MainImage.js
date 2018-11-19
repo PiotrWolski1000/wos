@@ -16,9 +16,9 @@ const Wrapper = styled.div`
 
 const Text = styled.div`
     position: absolute;
-    bottom: 50px;
+    bottom: 0.1em;
     color: white;
-    margin-left: 50px;
+    margin-left: 0.5em;
     h2 {
         font-size: 2rem;
     }

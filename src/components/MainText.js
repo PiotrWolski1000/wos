@@ -8,18 +8,19 @@ const Wrapper = styled.div`
     color: #707070;
     margin: 0 auto;
     p {
+        font-family: Segoe UI;
         text-align: justify;
         text-justify: inter-word;
         width: 80%;
         margin: 0 auto;
         /* text-decoration: justify; */
-        text-indent: 2em;
+        text-indent: 1em;
         /* word-wrap: break-word; */
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 1em;
+        margin-bottom: 1em;
         /* font-size: 2.7rem;
         line-height: 2.9rem; */
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 1.5em;
     }
 `

@@ -7,14 +7,6 @@ import Map from '../components/Map'
 
 const navigation = [
   {
-    name: 'Stertseite',
-    path: '/'
-  },
-  {
-    name: 'Über uns',
-    path: '/uber-uns'
-  },
-  {
     name: 'Leistungen',
     path: '/leistungen'
   },
