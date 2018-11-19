@@ -4,17 +4,25 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-    /* background-color: lightblue; */
+    /* background-color: lightblue; */ 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     margin: 50px 0 50px 0;
-    /* margin:  */
+    @media (max-width: 768px) {
+        flex-direction:column;
+    }
+
 `
 
 const InselImg = styled(Img)`
-    width: 60%;
     margin-right: 5%;
+    width: 50%;
+   
+    @media (max-width: 768px) {
+        margin-right: 0;
+        width: 80%;
+    }
 `
 const Content = styled.div`
     width: 40%;
@@ -22,58 +30,74 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+
 `
 const Button1 = styled.button`
     all: initial;
-    width: 412px;
-    height: 77px;
+    max-width: 412px;
+    height: 50px;
     background-color: #E52321;
     margin: 50px;
     border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;   
     text-align: center;
-    color: white;    
+    
+    @media (max-width: 768px) {
+        width: 100%;
+        
+    }
 
 
 `
 const Button2 = styled.button`
     all: initial;
-    width: 412px;
-    height: 77px;
+    max-width: 412px;
+    height: 50px;
     background-color: #E52321;
     margin: 50px;
     border-radius: 45px;
     text-align: center;
     color: white;    
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 const WhiteCircle = styled.div`
     width: 35px;
     height: 35px;
     border-radius: 100px;
     background-color: white;
+    position: relative;
+    left: -50px;
 
 `
 
+
 const Insel = () => (
   <StaticQuery
-    query={graphql`
+        query={graphql`
         query InselQuery {
             file(relativePath: { eq: "insel.png" }) {
                 childImageSharp {
-                    fixed(width: 907, height: 603) {
-                        ...GatsbyImageSharpFixed
-                    }
+                    fluid(maxWidth: 700) {
+                        # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+                        ...GatsbyImageSharpFluid_noBase64
+                      }
                 }
             }
         }`
-    }
+        }
 
     render = {data => (
         <Wrapper>
-            <InselImg fixed={data.file.childImageSharp.fixed} />
+            <InselImg  fluid={data.file.childImageSharp.fluid} />
             <Content>
                 <p>
                     Unsere Dienstleistungen 
@@ -81,12 +105,14 @@ const Insel = () => (
                     Föhr ab.
                 </p>
                 <Button1>
+                
+
                     <WhiteCircle>
 
                     </WhiteCircle>
-                    <div>
+                    <p>
                         Kontakt uns
-                    </div>
+                    </p>
                 </Button1>
 
                 <Button2>Prüfen Sie unser Angebot</Button2>

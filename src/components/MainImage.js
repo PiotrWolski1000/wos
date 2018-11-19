@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     color: #707070;
     box-shadow: 0px 1px 13px grey;
     position: relative;
+    font-size: 2em;
 `
 
 const Text = styled.div`
@@ -19,7 +20,7 @@ const Text = styled.div`
     color: white;
     margin-left: 50px;
     h2 {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 `
 const MainImage = () => (

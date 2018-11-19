@@ -12,14 +12,15 @@ const Wrapper = styled.div`
         text-justify: inter-word;
         width: 80%;
         margin: 0 auto;
-        text-decoration: justify;
-        text-indent: 50px;
-        word-wrap: break-word;
+        /* text-decoration: justify; */
+        text-indent: 2em;
+        /* word-wrap: break-word; */
         margin-top: 50px;
         margin-bottom: 50px;
-        font-size: 2.7rem;
-        line-height: 2.9rem;
-        
+        /* font-size: 2.7rem;
+        line-height: 2.9rem; */
+        font-size: 2.4rem;
+        line-height: 1.5em;
     }
 `
 const MainText = () => (
