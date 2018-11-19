@@ -97,14 +97,14 @@ class Header extends React.Component {
             <Menu>
               <ul>
                 {
-                  navigation.map((item, i) => (
-                    <Li key = {`menu_li${i}`}>
-                      <StyledLink key = {`menu_link${i}`} to={item.path}>
-                        {item.name}
-                      </StyledLink>
-                    </Li>
-                    )
-                  )
+                  // navigation.map((item, i) => (
+                  //   <Li key = {`menu_li${i}`}>
+                  //     <StyledLink key = {`menu_link${i}`} to={item.path}>
+                  //       {item.name}
+                  //     </StyledLink>
+                  //   </Li>
+                  //   )
+                  // )
                 }
               </ul>
             </Menu>

@@ -8,6 +8,7 @@ import Image from '../components/image'
 import Img from "gatsby-image"
 import {graphql} from 'gatsby'
 import Insel from '../components/Insel'
+import SimpleSlider from '../components/SimpleSlider'
 
 const IndexPage = (data) => (
   <Layout>
@@ -16,7 +17,8 @@ const IndexPage = (data) => (
     <MainImage></MainImage>
     <MainText></MainText>
     <Insel></Insel>
-    <Link to="/page-2/">Go to page 2</Link>
+    <SimpleSlider></SimpleSlider>
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
     {/* {console.log(data.data.file.childImageSharp.fixed)} */}
  
   </Layout>

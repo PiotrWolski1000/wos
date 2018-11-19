@@ -52,7 +52,12 @@ const DarkBottom = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    
+    @media (max-width: 375px) {
+      font-size: 1.1rem;
+    }
 
 `
 const LightUp = styled.div`
@@ -66,30 +71,42 @@ const LightUp = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* background-color: blue; */
   margin: 50px 0 0 50px;
-  width: 70%;
-  height: 100%;
+  /* width: 70%; */
+  /* background-color: blue; */
+  /* height: 100%; */
   color: white;
 `
 
 const Top = styled.div`
-  /* background-color: purple; */
   height: 50%;
   width: 100%;  
   display: flex;
-
+  
+   @media (max-width: 768px) {
+    flex-direction: column;
+    /* width: 100%; */
+  }
 
 `
 const Left = styled.div`
   width: 50%;
   height: 100%;
-  /* background-color: pink; */
+  margin-right: 50px;
+  
+  @media (max-width: 768px) {
+      /* padding-bottom: 50px; */
+      width: 100%;
+    }
 `
 const Right = styled.div`
   height: 100%;
   width:50%;
-  /* background-color: yellow; */
+  margin-right: 50px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 50px;
+  }
 `
 const Bottom = styled.div`
   height: 50%;
@@ -98,6 +115,15 @@ const Bottom = styled.div`
   ul {
     list-style: none;
   }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    margin: 50px 0 50px 0;
+    span {
+      display: none;
+    }
+  }
 
 `
 const Li = styled.li`
@@ -105,7 +131,8 @@ const Li = styled.li`
 `
 
 const StyledLink = styled(Link)`
-  color: #707070;
+  /* color: #707070; */
+  color: white !important;
   text-decoration: none;
   padding: 0 5px 5px 5px;
 
@@ -151,7 +178,7 @@ const Footer = (data) => (
                 // <Li key = {`footer_li${i}`}>
                   <StyledLink key = {`footer_link${i}`} to={item.path}>
                     {item.name} 
-                    {(navigation[i+1]) ? ' | ' : ''}
+                    {(navigation[i+1]) ? <span> | </span> : ''}
                   </StyledLink>
                 // </Li>
                 )
