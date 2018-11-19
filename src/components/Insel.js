@@ -2,11 +2,11 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-
+import mailImage from "./../images/mail.png"
 const Wrapper = styled.div`
     /* background-color: lightblue; */ 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 50px 0 50px 0;
     @media (max-width: 1024px) {
@@ -31,8 +31,6 @@ const Content = styled.div`
     align-items: center; 
     p {
         text-align: justify;
-        /* color: white !important; */
-        /* margin: 2em 0 2em 0; */
         color: #707070;
         font-family: Segoe UI;
         font-size: 1.5rem;
@@ -41,16 +39,16 @@ const Content = styled.div`
 
     }
     @media (max-width: 768px) {
-        /* text-indent: 1rem; */
-        width: 90%;
+        /* width: 90%; */
+        /* background-color: blue; */
         p {
             margin: 2.5em 0 2.5em 0;
         }
     }
 
     @media (max-width: 1024px) {
-        /* text-indent: 1rem; */
-        width: 90%;
+        width: 80%;
+        
         p {
             margin: 2.5em 0 2.5em 0;
         }
@@ -70,9 +68,9 @@ const Button1 = styled.button`
     color: white;   
     
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     span {
-        margin-left: -35px;
+        /* margin-left: -35px; */
     }
 
      @media (max-width: 500px) {
@@ -110,7 +108,7 @@ const Button2 = styled.button`
     text-align: center;
     
     color: white; 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
     
 
@@ -134,6 +132,11 @@ const Button2 = styled.button`
     }
 
 `
+const RelativeDiv = styled.div`
+    position: relative;
+    max-width: 35px;
+    max-height: 35px;
+`
 const WhiteCircle = styled.div`
     width: 35px;
     height: 35px;
@@ -141,7 +144,16 @@ const WhiteCircle = styled.div`
     background-color: white;
     margin-left: 1rem;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: left;
+    position: relative;
+    top:-4px;
+    img {
+        background-color: pink;
+    }
+
 
 `
 const Oder = styled.div`
@@ -151,7 +163,13 @@ const Oder = styled.div`
     justify-content: center;
     align-items: center;
 `
-
+const ImgIcon = styled.img`
+    position: absolute;
+    top: 2px;
+    left:23px;
+    width: 25px;
+    height: 25px;
+`
 
 const Insel = () => (
   <StaticQuery
@@ -162,7 +180,7 @@ const Insel = () => (
                     fluid(maxWidth: 700) {
                         # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
                         ...GatsbyImageSharpFluid_noBase64
-                      }
+                    }
                 }
             }
         }`
@@ -178,7 +196,13 @@ const Insel = () => (
                     Föhr ab.
                 </p>
                 <Button1>
-                    <WhiteCircle> </WhiteCircle>
+                    <RelativeDiv>
+                        <WhiteCircle style={{position:"absolute"}} />   
+                        <ImgIcon src={mailImage}alt='mail' style={{position:"absolute"}} ></ImgIcon>    
+                    </RelativeDiv>
+                    {/* <WhiteCircle>
+                        <img src={mailImage}alt='mail'  ></img>    
+                    </WhiteCircle> */}
                     <span>
                         Kontakt uns
                     </span>
