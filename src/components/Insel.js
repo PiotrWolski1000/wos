@@ -20,8 +20,7 @@ const InselImg = styled(Img)`
     width: 50%;
    
     @media (max-width: 768px) {
-        margin-right: 0;
-        width: 80%;
+        /* width: 100%; */
     }
 `
 const Content = styled.div`
@@ -43,7 +42,7 @@ const Content = styled.div`
     }
     @media (max-width: 768px) {
         /* text-indent: 1rem; */
-        width: 80%;
+        width: 90%;
         p {
             margin: 2.5em 0 2.5em 0;
         }
@@ -51,11 +50,14 @@ const Content = styled.div`
 
     @media (max-width: 1024px) {
         /* text-indent: 1rem; */
-        width: 100%;
+        width: 90%;
         p {
             margin: 2.5em 0 2.5em 0;
         }
+
+
     }
+
 
 
 
@@ -73,22 +75,28 @@ const Button1 = styled.button`
         margin-left: -35px;
     }
 
-    @media (max-width: 768px) {
-        width: 100%;
+     @media (max-width: 500px) {
+        font-size: 1.3rem;
+        min-width: 200px;
     }
-    @media(min-width: 769px){
-        width: 50%;
-        min-width: 400px;
 
+
+    @media (max-width: 768px) {
+        min-width:250px;
     }
-    @media(min-width: 1280px){
+
+    @media(min-width: 769px){
+        min-width: 300px;
+    }
+
+     @media(min-width: 1280px){
         min-width: 400px;
     }
 
 `
 const Button2 = styled.button`
     all: initial;
-    min-width: 400px;
+    /* min-width: 400px; */
     
     height: 55px;
 
@@ -106,6 +114,7 @@ const Button2 = styled.button`
 
     
 
+    
     @media (max-width: 500px) {
         font-size: 1.3rem;
         min-width: 200px;
@@ -113,11 +122,11 @@ const Button2 = styled.button`
 
 
     @media (max-width: 768px) {
-        width: 100%;
+        min-width:250px;
     }
 
     @media(min-width: 769px){
-        width: 50%;
+        min-width: 300px;
     }
 
      @media(min-width: 1280px){
