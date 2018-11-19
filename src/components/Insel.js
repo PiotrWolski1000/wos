@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin: 50px 0 50px 0;
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         flex-direction:column;
     }
 
@@ -28,64 +28,119 @@ const Content = styled.div`
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center; 
     p {
-        margin: 2em 0 2em 0;
+        text-align: justify;
+        /* color: white !important; */
+        /* margin: 2em 0 2em 0; */
         color: #707070;
         font-family: Segoe UI;
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        text-indent: 1em;
+
     }
     @media (max-width: 768px) {
-        text-indent: 1rem;
+        /* text-indent: 1rem; */
         width: 80%;
+        p {
+            margin: 2.5em 0 2.5em 0;
+        }
     }
+
+    @media (max-width: 1024px) {
+        /* text-indent: 1rem; */
+        width: 100%;
+        p {
+            margin: 2.5em 0 2.5em 0;
+        }
+    }
+
+
 
 `
 const Button1 = styled.button`
     all: initial;
-    max-width: 412px;
-    height: 50px;
+    height: 55px;
     background-color: #E52321;
-    /* margin: 50px; */
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    border-radius: 25px;
     color: white;   
-    text-align: center;
     
-    font-size: 1.3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    span {
+        margin-left: -35px;
+    }
 
     @media (max-width: 768px) {
         width: 100%;
-        
     }
+    @media(min-width: 769px){
+        width: 50%;
+        min-width: 400px;
 
+    }
+    @media(min-width: 1280px){
+        min-width: 400px;
+    }
 
 `
 const Button2 = styled.button`
     all: initial;
-    max-width: 412px;
-    height: 50px;
+    min-width: 400px;
+    
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #E52321;
-    /* margin: 50px; */
-    border-radius: 20px;
-    /* text-align: center; */
-    color: white;    
+    border-radius: 25px;
+
+    text-align: center;
+    
+    color: white; 
+    font-size: 1.5rem;
+
+    
+
+    @media (max-width: 500px) {
+        font-size: 1.3rem;
+        min-width: 200px;
+    }
+
+
     @media (max-width: 768px) {
         width: 100%;
     }
+
+    @media(min-width: 769px){
+        width: 50%;
+    }
+
+     @media(min-width: 1280px){
+        min-width: 400px;
+    }
+
 `
 const WhiteCircle = styled.div`
     width: 35px;
     height: 35px;
     border-radius: 100px;
     background-color: white;
-    position: relative;
-    left: -50px;
+    margin-left: 1rem;
 
+    float: left;
+
+`
+const Oder = styled.div`
+    height: 100px;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
 `
 
 
@@ -114,15 +169,15 @@ const Insel = () => (
                     Föhr ab.
                 </p>
                 <Button1>
-                
-
-                    <WhiteCircle>
-
-                    </WhiteCircle>
-                    <p>
+                    <WhiteCircle> </WhiteCircle>
+                    <span>
                         Kontakt uns
-                    </p>
+                    </span>
                 </Button1>
+
+                <Oder>
+                    oder
+                </Oder>
 
                 <Button2>Prüfen Sie unser Angebot</Button2>
             </Content>
