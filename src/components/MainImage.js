@@ -22,6 +22,26 @@ const Text = styled.div`
     h2 {
         font-size: 2rem;
     }
+
+     @media (max-width: 425px) {
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2{
+            font-size: 3rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        h2{
+            font-size: 4rem;
+        }
+    }
+    
+
 `
 const MainImage = () => (
   <StaticQuery

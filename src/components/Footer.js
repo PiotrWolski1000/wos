@@ -45,10 +45,10 @@ const DarkBottom = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     
     @media (max-width: 375px) {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
 `
@@ -100,7 +100,10 @@ const Right = styled.div`
     margin-top: 50px;
   }
 `
+
+
 const Bottom = styled.div`
+  padding: 1rem 0 1rem 0;
   height: 50%;
   width: 100%;
   display: flex;
@@ -126,7 +129,7 @@ const StyledLink = styled(Link)`
   /* color: #707070; */
   color: white !important;
   text-decoration: none;
-  padding: 0 5px 5px 5px;
+  padding: 0.5rem 0rem 0.5rem 0.5rem ;
 
 
   ${this}:visited{
@@ -183,7 +186,7 @@ const Footer = (data) => (
     </LightUp>
     <DarkBottom>
       {/* {console.log(window.location.href)} */}
-    © {(typeof window)? new Date().getFullYear():''} WoS Hausmeister Service auf Föhr
+    © {(typeof window)? new Date().getFullYear():''}
     </DarkBottom>
   </Wrapper>
 )
