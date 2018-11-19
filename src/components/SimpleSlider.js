@@ -57,14 +57,15 @@ export default class SimpleSlider extends Component {
           <H2> " </H2>
           <P>Mit reinem Herzen kann ich diese Firma weiterempfehlen, vielen Dank. </P>
           <H2> " </H2>
-
-          {/* <P>znacznik p 1.4em </P>
-          <B>znacznik span 2em</B> */}
         </AddWrap>
 
-           {/* <Slider {...settings}>
+        {/* <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <AddWrap>
+              <H2> " </H2>
+              <P>Mit reinem Herzen kann ich diese Firma weiterempfehlen, vielen Dank. </P>
+              <H2> " </H2>
+           </AddWrap>
           </div>
           <div>
             <h3>2</h3>
@@ -81,7 +82,7 @@ export default class SimpleSlider extends Component {
           <div>
             <h3>6</h3>
           </div>
-        </Slider> } */}
+        </Slider> */}
       </Wrapper>
     )
   }

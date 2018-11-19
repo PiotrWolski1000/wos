@@ -69,6 +69,8 @@ const Button1 = styled.button`
     
     text-align: center;
     font-size: 1.3rem;
+    cursor: pointer;
+
     span {
         /* margin-left: -35px; */
     }
@@ -95,7 +97,7 @@ const Button1 = styled.button`
 const Button2 = styled.button`
     all: initial;
     /* min-width: 400px; */
-    
+    cursor: pointer;
     height: 55px;
 
     display: flex;
@@ -200,9 +202,6 @@ const Insel = () => (
                         <WhiteCircle style={{position:"absolute"}} />   
                         <ImgIcon src={mailImage}alt='mail' style={{position:"absolute"}} ></ImgIcon>    
                     </RelativeDiv>
-                    {/* <WhiteCircle>
-                        <img src={mailImage}alt='mail'  ></img>    
-                    </WhiteCircle> */}
                     <span>
                         Kontakt uns
                     </span>
