@@ -3,8 +3,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import mailImage from "./../images/mail.png"
+
 const Wrapper = styled.div`
-    /* background-color: lightblue; */ 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -16,11 +16,25 @@ const Wrapper = styled.div`
 `
 
 const InselImg = styled(Img)`
-    /* margin-right: 5%; */
     width: 50%;
    
-    @media (max-width: 768px) {
-        /* width: 100%; */
+    ${this}::after {
+        content: "Föhr";
+        font-size: 13rem;
+        color: #707070;
+        position: relative;
+        bottom: 0px;
+        font-weight: 430;
+        font-family: Segoe UI;
+
+        @media(max-width: 600px) {
+            font-size: 7rem;
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+        width: 80%;
     }
 `
 const Content = styled.div`
@@ -36,11 +50,10 @@ const Content = styled.div`
         font-size: 1.5rem;
         line-height: 1.5rem;
         text-indent: 1em;
+        margin-bottom: 75px;
 
     }
     @media (max-width: 768px) {
-        /* width: 90%; */
-        /* background-color: blue; */
         p {
             margin: 2.5em 0 2.5em 0;
         }
@@ -48,12 +61,9 @@ const Content = styled.div`
 
     @media (max-width: 1024px) {
         width: 80%;
-        
         p {
             margin: 2.5em 0 2.5em 0;
         }
-
-
     }
 
 
@@ -70,10 +80,6 @@ const Button1 = styled.button`
     text-align: center;
     font-size: 1.3rem;
     cursor: pointer;
-
-    span {
-        /* margin-left: -35px; */
-    }
 
      @media (max-width: 500px) {
         font-size: 1.3rem;
@@ -96,7 +102,6 @@ const Button1 = styled.button`
 `
 const Button2 = styled.button`
     all: initial;
-    /* min-width: 400px; */
     cursor: pointer;
     height: 55px;
 
@@ -190,12 +195,13 @@ const Insel = () => (
 
     render = {data => (
         <Wrapper>
+            {/* <h3 style={{position:'relative',color: 'black', backgroundColor:'red'}}>Föhr</h3> */}
             <InselImg  fluid={data.file.childImageSharp.fluid} />
             <Content>
                 <p>
                     Unsere Dienstleistungen 
                     decken die gesamte Insel
-                    Föhr ab.
+                    Föhr ab!
                 </p>
                 <Button1>
                     <RelativeDiv>
