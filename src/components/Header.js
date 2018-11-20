@@ -65,9 +65,6 @@ text-decoration: none;
 
 
 const Menu = styled.div`
-  ul {
-    list-style: none;
-  }
 
   width: 100%;
   display: flex;
@@ -77,7 +74,28 @@ const Menu = styled.div`
   height: ${props => props.isVisible ? '200px'  : '0px'};
   transition: height 0.5s ease, visibility 0s;
 
+  ul {
+    list-style: none;
+  }
 `
+const HorizontalMenu = styled.div`
+
+  @media(max-width: 768px){
+    display:none;
+  }
+  @media(min-width: 769px){
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    color: #707070;
+    /* display: block; */
+    /* height:50px;
+    width: 100%;
+    background-color: paleturquoise; */
+  }
+
+`
+
 const HamburgerMenu = styled.div`
     position: absolute;
     top: 70px;
@@ -174,17 +192,27 @@ class Header extends React.Component {
                   <div />
                   <div />
                 </HamburgerMenu>
+                <HorizontalMenu>
+                  {
+                    navigation.map((item, i) => (
+                        <StyledLink key = {`menu_link${i}`} to={item.path}>
+                          {item.name}
+                          </StyledLink>
+                      )
+                      )
+                  }
+                </HorizontalMenu>
               </Wrapper>
               <Menu  isVisible={collapsed}>
-                    {
-                      navigation.map((item, i) => (
-                          <StyledLink key = {`menu_link${i}`} to={item.path}>
-                            {item.name}
-                            </StyledLink>
+                  {
+                    navigation.map((item, i) => (
+                        <StyledLink key = {`menu_link${i}`} to={item.path}>
+                          {item.name}
+                          </StyledLink>
                         )
-                        )
-                    }
-                </Menu>
+                      )
+                  }
+              </Menu>
             </MainWrapper>
           ) 
         }
