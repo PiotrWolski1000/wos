@@ -7,7 +7,7 @@ import Header from './Header'
 import Footer from './Footer'
 // import styled from 'styled-components'
 import './layout.css'
-
+// import favicon from '../images/HeaderImage.png';
 
 
 
@@ -30,6 +30,9 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
+        //   link={[
+        //     { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+        // ]}
         >
           <html lang="en" />
         </Helmet>

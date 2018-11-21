@@ -12,15 +12,10 @@ import SimpleSlider from '../components/SimpleSlider'
 
 const IndexPage = (data) => (
   <Layout>
-    {/* {console.log(data.data.file.childImageSharp.fixed)} */}
-    {/* <Img fixed={data.data.file.childImageSharp.fixed} /> */}
     <MainImage></MainImage>
     <MainText></MainText>
     <Insel></Insel>
     <SimpleSlider></SimpleSlider>
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
-    {/* {console.log(data.data.file.childImageSharp.fixed)} */}
- 
   </Layout>
 )
 

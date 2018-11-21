@@ -52,7 +52,7 @@ const LogoImg = styled(Img)`
 
 const StyledLink = styled(Link)`
 text-decoration: none;
-  color: #000;
+  color: #707070;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 10px;
   @media (min-width: 768px) {
@@ -71,7 +71,7 @@ const Menu = styled.div`
   opacity: ${props => props.isVisible ? '1'  : '0'};
   flex-direction: column;
   visibility: ${props => props.isVisible ? 'visible'  : 'hidden'};
-  height: ${props => props.isVisible ? '200px'  : '0px'};
+  height: ${props => props.isVisible ? '275px'  : '0px'};
   transition: height 0.5s ease, visibility 0s;
 
   ul {
@@ -88,10 +88,6 @@ const HorizontalMenu = styled.div`
     justify-content: center;
     margin-right: 50px;
     color: #707070;
-    /* display: block; */
-    /* height:50px;
-    width: 100%;
-    background-color: paleturquoise; */
   }
 
 `
@@ -105,7 +101,7 @@ const HamburgerMenu = styled.div`
     height: 5px;
     border-radius: 5px;
     transition: 0.4s;
-    background-color: #000;
+    background-color: #707070;
 
     &:first-child,
     &:last-child {
@@ -155,7 +151,8 @@ class Header extends React.Component {
   UNSAFE_componentWillMount(){
     const path = windowGlobal ? windowGlobal.location.pathname : false
     this.setState(prevState => ({path: path}))
-    console.log(path)
+    console.log(path+'lol')
+    
   }
 
   handleCollapseMenu = () => this.setState(prevState => ({collapsed: !prevState.collapsed}))
@@ -205,11 +202,20 @@ class Header extends React.Component {
               </Wrapper>
               <Menu  isVisible={collapsed}>
                   {
-                    navigation.map((item, i) => (
-                        <StyledLink key = {`menu_link${i}`} to={item.path}>
-                          {item.name}
+                                          
+                    navigation.map((item, i) => {
+                      if(this.state.path === item.path)
+                      {
+                        return (
+                          // if(this.state.path === item.path)?
+                          <StyledLink  style={{fontWeight: 'bold', borderBottom: '4px solid red'}} key = {`menu_link${i}`} to={item.path}> 
+                            
+                            {item.name}
+                          
                           </StyledLink>
-                        )
+                          )
+                      }
+                      }
                       )
                   }
               </Menu>

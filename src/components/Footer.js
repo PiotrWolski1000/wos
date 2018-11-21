@@ -148,7 +148,7 @@ const Footer = (data) => (
       <ContentWrapper>
         <Top>
           <Left>
-              <p>
+              <p style={{color: '#491818', fontSize: '1.5rem'}}>
                 WoS Hausmeister Service auf Föhr
               </p>
               <p>
@@ -160,9 +160,9 @@ const Footer = (data) => (
               <Map/>
           </Left>
           <Right>
-            <p> Telefon </p>
+            <p style={{color: '#491818', fontSize: '1.5rem'}}> Telefon </p>
             <p> +0151 7131 7746 </p>
-            <p> E-mail </p>
+            <p style={{color: '#491818', fontSize: '1.5rem'}}> E-mail </p>
             <p> Hausmeister.sikorski@web.de</p>
           </Right>
         </Top>
@@ -171,10 +171,10 @@ const Footer = (data) => (
             {
               navigation.map((item, i) => (
                 // <Li key = {`footer_li${i}`}>
-                  <StyledLink key = {`footer_link${i}`} to={item.path}>
+                  <Link style={{color: 'white',paddingRight: '1rem',fontFamily: 'Sagoe UI', fontSize: '1.5rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
                     {item.name} 
-                    {(navigation[i+1]) ? <span> | </span> : ''}
-                  </StyledLink>
+                    {(navigation[i+1]) ? <span style={{color: '#CE1715'}}> | </span> : ''}
+                  </Link>
                 // </Li>
                 )
               )
