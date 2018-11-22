@@ -6,11 +6,15 @@ import mailImage from "./../images/mail.png"
 
 const Wrapper = styled.div`
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
+    /* justify-content: space-around; */
     align-items: center;
     margin: 50px 0 50px 0;
     @media (max-width: 1024px) {
         flex-direction:column;
+        /* justify-content: center;
+        align-items: center; */
     }
 
 `
@@ -18,6 +22,8 @@ const Wrapper = styled.div`
 const InselImg = styled(Img)`
     width: 50%;
    
+    padding: 0 1em 0 1em;
+
     ${this}::after {
         content: "Föhr";
         font-size: 13rem;
@@ -33,8 +39,13 @@ const InselImg = styled(Img)`
 
     }
 
+    @media(max-width: 768px){
+        width: 90%;
+    }
+
+    
     @media (max-width: 1024px) {
-        width: 80%;
+        width: 90%;
     }
 `
 const Content = styled.div`
