@@ -83,7 +83,7 @@ const Content = styled.div`
 `
 const Button1 = styled.button`
     all: initial;
-    height: 55px;
+    height: 48px;
     background-color: #E52321;
     border-radius: 25px;
     color: white;   
@@ -152,8 +152,10 @@ const Button2 = styled.button`
 `
 const RelativeDiv = styled.div`
     position: relative;
-    max-width: 35px;
-    max-height: 35px;
+    max-width: 34px;
+    max-height: 34px;
+    top: 0px;
+    left: -3px;
 `
 const WhiteCircle = styled.div`
     width: 35px;
@@ -168,6 +170,8 @@ const WhiteCircle = styled.div`
     float: left;
     position: relative;
     top:-4px;
+    left: -6px;
+
     img {
         background-color: pink;
     }
@@ -183,10 +187,10 @@ const Oder = styled.div`
 `
 const ImgIcon = styled.img`
     position: absolute;
-    top: 2px;
-    left:23px;
-    width: 25px;
-    height: 25px;
+    top: 3px;
+    left:20px;
+    width: 20px;
+    height: 20px;
 `
 
 const Insel = () => (
