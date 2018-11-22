@@ -3,6 +3,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import mailImage from "./../images/mail.png"
+import { Link } from 'gatsby'
+
 
 const Wrapper = styled.div`
     display: flex;
@@ -218,21 +220,24 @@ const Insel = () => (
                     decken die gesamte Insel
                     Föhr ab!
                 </p>
-                <Button1>
-                    <RelativeDiv>
-                        <WhiteCircle style={{position:"absolute"}} />   
-                        <ImgIcon src={mailImage}alt='mail' style={{position:"absolute"}} ></ImgIcon>    
-                    </RelativeDiv>
-                    <span>
-                        Kontakt uns
-                    </span>
-                </Button1>
+                <Link to={'/kontakt'} style={{textDecoration: 'none'}}>
+                    <Button1>
+                        <RelativeDiv>
+                            <WhiteCircle style={{position:"absolute"}} />   
+                            <ImgIcon src={mailImage}alt='mail' style={{position:"absolute"}} ></ImgIcon>    
+                        </RelativeDiv>
+                        <span>
+                            Kontakt uns
+                        </span>
+                    </Button1>
+                </Link>
 
                 <Oder>
                     oder
                 </Oder>
-
-                <Button2>Prüfen Sie unser Angebot</Button2>
+                <Link to={'/leistungen'} style={{textDecoration: 'none'}}>
+                    <Button2>Prüfen Sie unser Angebot</Button2>
+                </Link>
             </Content>
         </Wrapper>
     )}
