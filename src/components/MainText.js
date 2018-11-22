@@ -25,9 +25,6 @@ const MainText = () => (
   <Wrapper>
     <p>   
         Hier finden Sie alle Informationen über unsere Dienstleistungen. 
-        Sollten Sie detaillierte Fragen zu unserem Unternehmen, unseren
-        Dienstleistungen haben, stehen wir Ihnen gerne per E-Mail oder telefonisch
-        zur Verfügung.
     </p>
   </Wrapper>
 )
