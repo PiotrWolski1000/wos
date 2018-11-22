@@ -191,32 +191,49 @@ class Header extends React.Component {
                 </HamburgerMenu>
                 <HorizontalMenu>
                   {
-                    navigation.map((item, i) => (
-                        <StyledLink key = {`menu_link${i}`} to={item.path}>
+                    navigation.map((item, i) => {  
+                      if(windowGlobal && '/'+window.location.href.split('/').pop()   === item.path){
+                        return(
+                        <StyledLink  style = {{color: 'black', paddingLeft: '5px', borderBottom: 'red solid 4px'}}key = {`menu_desktop_link${i}`} to={item.path}> 
+                          
                           {item.name}
-                          </StyledLink>
-                      )
-                      )
+                        
+                        </StyledLink>
+                        )
+                      } else {
+                        return (
+                          <StyledLink  key = {`menu_desktop_link${i}`} to={item.path}> 
+                            
+                            {item.name}
+                          
+                          </StyledLink>)
+                      }   
+                    }
+                  )
                   }
                 </HorizontalMenu>
               </Wrapper>
               <Menu  isVisible={collapsed}>
                   {
-                                          
-                    navigation.map((item, i) => {
-                      if(this.state.path === item.path)
-                      {
-                        return (
-                          // if(this.state.path === item.path)?
-                          <StyledLink  style={{fontWeight: 'bold', borderBottom: '4px solid red'}} key = {`menu_link${i}`} to={item.path}> 
-                            
-                            {item.name}
-                          
-                          </StyledLink>
-                          )
-                      }
-                      }
+                    navigation.map((item, i) => {  
+                    if(windowGlobal && '/'+window.location.href.split('/').pop()   === item.path){
+                      return(
+                      <StyledLink  style = {{color: 'black', paddingLeft: '5px', borderLeft: 'red solid 4px'}}key = {`menu_link${i}`} to={item.path}> 
+                        
+                        {item.name}
+                      
+                      </StyledLink>
                       )
+                    } else {
+                      return (
+                        <StyledLink  key = {`menu_link${i}`} to={item.path}> 
+                          
+                          {item.name}
+                        
+                        </StyledLink>)
+                    }   
+                  }
+                )
                   }
               </Menu>
             </MainWrapper>
