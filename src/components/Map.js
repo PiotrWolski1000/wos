@@ -13,11 +13,13 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 200px;
+    /* width: 50%; */
   } 
-  @media (min-width: 425px) {
+  @media (min-width: 321px) {
     width: 250px;
+    /* width: 50%; */
   } 
 
   @media (min-width: 500px) {
@@ -35,7 +37,7 @@ const Wrapper = styled.div`
 
 const map  = () => (
   <Wrapper>
-    <Map center={[54.736557, 8.498252]} zoom={12} >
+    <Map center={[54.711860, 8.530739]} zoom={12} >
       <Marker anchor={[54.736557, 8.498252]} payload={1} onClick={({ event, anchor, payload }) => {}} />
 
       {/* <Overlay anchor={[54.736557, 8.498252]} offset={[120, 79]}>

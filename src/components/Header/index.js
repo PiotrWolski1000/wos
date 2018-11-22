@@ -83,10 +83,10 @@ class Header extends React.Component {
                 <El.HorizontalMenu>
                   {
                     navigation.map((item, i) => {  
-                      if(windowGlobal && '/' + window.location.href.split('/').pop()   === item.path || item.path === '/'){
+                      if(windowGlobal && '/' + window.location.href.split('/').pop()   === item.path){
                         return(
                         <El.StyledLink  style = {{color: 'black', paddingLeft: '5px', borderBottom: 'red solid 4px'}}key = {`menu_desktop_link${i}`} to={item.path}> 
-                          
+                          { console.log(window.location.href.split('/').pop())}
                           {item.name}
                         
                         </El.StyledLink>

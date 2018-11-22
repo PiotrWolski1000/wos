@@ -90,11 +90,20 @@ const Left = styled.div`
       /* padding-bottom: 50px; */
       width: 100%;
     }
+
+  p {
+    font-size: 1.3rem;
+  }
 `
 const Right = styled.div`
   height: 100%;
   width:50%;
   margin-right: 50px;
+  
+  p {
+    font-size: 1.3rem;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 50px;
@@ -103,33 +112,39 @@ const Right = styled.div`
 
 
 const Bottom = styled.div`
-  padding: 1rem 0 1rem 0;
   height: 50%;
   width: 100%;
   display: flex;
-  ul {
-    list-style: none;
-  }
-  
+  list-style: none;
+ 
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
-    margin: 50px 0 50px 0;
     span {
       display: none;
     }
   }
 
 `
-const Li = styled.li`
-  margin: 0 10px 0 0px;
+const Li =styled.li`
+
+  width: auto;
+  margin: 0.5rem 0px 0.5rem 0px;
+  
+  @media(max-width: 768px) {
+    /* padding-left: 10px; */
+    /* border-left: 5px solid #CE1715; */
+  }
+
+
+  ${this}:hover{
+    text-decoration: underline;
+  }
 `
 
 const StyledLink = styled(Link)`
-  /* color: #707070; */
   color: white !important;
   text-decoration: none;
-  padding: 0.5rem 0rem 0.5rem 0.5rem ;
 
 
   ${this}:visited{
@@ -170,22 +185,20 @@ const Footer = (data) => (
           {/* <ul> */}
             {
               navigation.map((item, i) => (
-                // <Li key = {`footer_li${i}`}>
-                  <Link style={{color: 'white',paddingRight: '1rem',fontFamily: 'Sagoe UI', fontSize: '1.5rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
+                <Li key={`footer_li${i}`}>
+                  <Link style={{color: 'white',fontFamily: 'Sagoe UI', fontSize: '1.5rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
                     {item.name} 
-                    {(navigation[i+1]) ? <span style={{color: '#CE1715'}}> | </span> : ''}
+                    {(navigation[i+1]) ? <span style={{color: '#CE1715', padding: '0 5px 0 5px'}}> | </span> : ''}
                   </Link>
-                // </Li>
+                </Li>
                 )
               )
             }
-          {/* </ul> */}
-
+            {/* </ul> */}
         </Bottom>
       </ContentWrapper>
     </LightUp>
     <DarkBottom>
-      {/* {console.log(window.location.href)} */}
     © {(typeof window)? new Date().getFullYear():''}
     </DarkBottom>
   </Wrapper>
