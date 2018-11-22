@@ -12,7 +12,7 @@ const Leistungen = (data) => (
 )
 
 export const indexQuery = graphql`
-  query UberUnsQuery {
+  query LeistungenQuery {
     file(relativePath: { eq: "headerImage.png" }) {
       childImageSharp {
         fixed(width: 125, height: 125) {

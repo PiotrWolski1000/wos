@@ -12,7 +12,7 @@ const Kontakt = (data) => (
 )
 
 export const indexQuery = graphql`
-  query UberUnsQuery {
+  query KontaktQuery {
     file(relativePath: { eq: "headerImage.png" }) {
       childImageSharp {
         fixed(width: 125, height: 125) {
