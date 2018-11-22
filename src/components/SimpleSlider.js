@@ -1,89 +1,99 @@
 import React, { Component } from "react";
-
 import Slider from "react-slick";
 import styled from 'styled-components'
 // import "~slick-carousel/slick/slick.css";
 // import "~slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+const Description = [
+  {
+    text: 'Mit reinem Herzen kann ich diese Firma weiterempfehlen, vielen Dank.',
+  },
+  {
+    text: 'Lorem ipsum dolor sit amet.',
+  },
+]
 
 const Wrapper = styled.div`
   font-size:100%; 
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
-`
-const H2 = styled.h2`
-  font-family: Perpetua Titling MT;
-  font-size:2.4em;
-  position: relative;
-
-  bottom: 0.25em;
-`
-
-const B = styled.span`
-  font-size:2em;
+  /* background-color: yellow; */
 `
 
 const P = styled.p`
   font-family: Segoe UI;
   font-size: 1.4rem;
-  font-weight: regular;
+  line-height: 2.5rem;
+        font-weight: regular;
   color: #707070;
+  text-justify: inter-word;
+  /* max-width: 500px; */
+  /* margin: auto; */
+    /* text-align: center; */
+
+  ${this}::before{
+    content: '"';
+    font-family: Perpetua Titling MT;
+    font-size:2.4em;
+    color: black;
+    position: relative;
+    top: 0.5rem;
+  }
+  ${this}::after {
+    content: '"';
+    font-family: Perpetua Titling MT;
+    font-size:2.4em;
+    color: black;    
+    position: relative;
+    top: 3rem;
+  }
+  
+  @media (max-width: 1024px) {
+    width: 80%;
+    /* text-align: center; */
+  }
 `
 
 const AddWrap = styled.div`
-  width: 90%;
-  font-size:100%;
+  width: 100%;
+  /* max-width: 500px; */
   display: flex;
   justify-content: center;
-  margin: 5em 0 5em 0;
+  margin: 5rem 0 5rem 0;
 `
 
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: false
     };
     return (
-      <Wrapper>
-
-        <AddWrap>
-          <H2> " </H2>
-          <P>Mit reinem Herzen kann ich diese Firma weiterempfehlen, vielen Dank. </P>
-          <H2> " </H2>
-        </AddWrap>
-
-        {/* <Slider {...settings}>
-          <div>
-            <AddWrap>
-              <H2> " </H2>
-              <P>Mit reinem Herzen kann ich diese Firma weiterempfehlen, vielen Dank. </P>
-              <H2> " </H2>
-           </AddWrap>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider> */}
-      </Wrapper>
+          // <SimpleSlider>
+          <Slider {...settings}>
+          { 
+            
+            Description.map((item, i) => (
+              <div key={`div_slider_${i}`}>
+                <Wrapper>
+                    <AddWrap key={`add_wrap${i}`}>
+                      <P key={`add_wrap_p${i}`}>{item.text}</P>
+                    </AddWrap>
+                </Wrapper>
+              </div>
+              )
+            )
+          }
+          </Slider>
+      // </SimpleSlider>
     )
   }
 }

@@ -15,7 +15,10 @@ const IndexPage = (data) => (
     <MainImage></MainImage>
     <MainText></MainText>
     <Insel></Insel>
-    <SimpleSlider></SimpleSlider>
+     <div style={{width: '100%'}}>
+      <SimpleSlider/>
+
+    </div>
   </Layout>
 )
 

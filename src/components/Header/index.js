@@ -42,7 +42,7 @@ class Header extends React.Component {
   UNSAFE_componentWillMount(){
     const path = windowGlobal ? windowGlobal.location.pathname : false
     this.setState(prevState => ({path: path}))
-    // console.log('path'+path)
+    console.log('path'+path)
     
   }
 
