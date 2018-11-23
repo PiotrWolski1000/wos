@@ -19,7 +19,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: yellow; */
 `
 
 const P = styled.p`
@@ -29,10 +28,7 @@ const P = styled.p`
         font-weight: regular;
   color: #707070;
   text-justify: inter-word;
-  /* max-width: 500px; */
-  /* margin: auto; */
-    /* text-align: center; */
-
+  
   ${this}::before{
     content: '"';
     font-family: Perpetua Titling MT;
@@ -75,7 +71,7 @@ export default class SimpleSlider extends Component {
       slidesToScroll: 1,
       autoplaySpeed: 4000,
       arrows: false,
-      //autoplay: true,
+      autoplay: true,
     };
     return (
           <Slider {...settings}>
