@@ -10,7 +10,7 @@ const Description = [
     text: 'Mit reinem Herzen kann ich diese Firma weiterempfehlen, vielen Dank.',
   },
   {
-    text: 'Lorem ipsum dolor sit amet.',
+    text: 'Service sehr schnell und richtig gemacht.',
   },
 ]
 
@@ -47,21 +47,22 @@ const P = styled.p`
     font-size:2.4em;
     color: black;    
     position: relative;
-    top: 3rem;
+    top: 2.8rem;
+    left: 0.3rem;
   }
   
   @media (max-width: 1024px) {
     width: 80%;
-    /* text-align: center; */
   }
 `
 
 const AddWrap = styled.div`
   width: 100%;
-  /* max-width: 500px; */
   display: flex;
   justify-content: center;
-  margin: 5rem 0 5rem 0;
+  text-align:center;
+  margin: 0 auto;
+  padding: 5rem 0 5rem 0;
 `
 
 export default class SimpleSlider extends Component {
@@ -72,12 +73,11 @@ export default class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
       autoplaySpeed: 4000,
-      arrows: false
+      arrows: false,
+      //autoplay: true,
     };
     return (
-          // <SimpleSlider>
           <Slider {...settings}>
           { 
             
@@ -93,7 +93,6 @@ export default class SimpleSlider extends Component {
             )
           }
           </Slider>
-      // </SimpleSlider>
     )
   }
 }
