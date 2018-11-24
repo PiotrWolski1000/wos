@@ -7,16 +7,25 @@ export const Wrapper = styled.div`
 
   justify-content: space-between;
   align-items: center;
-  min-height: 175px ;
+  min-height: 120px ;
   height: auto;
   width: 100%;
   color: #707070;
   background-color: #FFFFFF;
+  @media(min-height: 768px) {
+    min-height: 150px;
+  }
 `
 
 export const LogoImg = styled(Img)`
-  margin: 25px;
+  margin-left: 2rem;
+  width:75px;
+  height:75px;
   cursor: pointer;
+  @media(min-width: 768px){
+    width: 100px;
+    height: 100px;
+  }
 `
 
 export const StyledLink = styled(Link)`
