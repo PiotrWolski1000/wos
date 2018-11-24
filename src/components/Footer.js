@@ -63,7 +63,7 @@ const LightUp = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 50px 0 0 50px;
+  margin: 1rem 0 0 1rem;
   /* width: 70%; */
   /* background-color: blue; */
   /* height: 100%; */
