@@ -116,7 +116,12 @@ const Bottom = styled.div`
   width: 100%;
   display: flex;
   list-style: none;
- 
+  @media(min-width: 769px){
+
+    margin-top: 2rem;
+  }
+
+
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;

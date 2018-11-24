@@ -56,20 +56,20 @@ class Header extends React.Component {
       <StaticQuery
         query = {graphql`
         query HeaderQuery {
-          file(relativePath: { eq: "headerImage.png" }) {
+          file(relativePath: {eq: "headerImage.png"}) {
             childImageSharp {
-              fixed(width: 125, height: 125) {
-                ...GatsbyImageSharpFixed
-              }
+                fluid(maxWidth: 100) {
+                  ...GatsbyImageSharpFluid
+                }
             }
-          }
+        }
         }
         `}
         render = { data => (
             <El.MainWrapper>
               <El.Wrapper className="header">
                 <Link to = '/'>
-                  <El.LogoImg fixed={data.file.childImageSharp.fixed} />
+                  <El.LogoImg fluid={data.file.childImageSharp.fluid} />
                 </Link>
 
                 <El.HamburgerMenu
