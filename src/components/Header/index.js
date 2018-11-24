@@ -8,7 +8,7 @@ const windowGlobal = typeof window !== 'undefined' && window
 
 const navigation = [
   {
-    name: 'Stertseite',
+    name: 'Startseite',
     path: '/'
   },
   {
