@@ -4,10 +4,14 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {graphql} from 'gatsby'
 import SimpleSlider from '../components/SimpleSlider'
+import KontaktForm from '../components/Kontakt/'
 
 const Kontakt = (data) => (
   <Layout>
-    <SimpleSlider></SimpleSlider>
+    <KontaktForm>
+      form
+    </KontaktForm>
+  <SimpleSlider/>
   </Layout>
 )
 
