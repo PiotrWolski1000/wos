@@ -72,8 +72,8 @@ export const HorizontalMenu = styled.div`
 
 export const HamburgerMenu = styled.div`
     position: absolute;
-    top: 70px;
-    right: 50px;
+    top: 4rem;
+    right: 2rem;
   & > div {
     width: 30px;
     height: 5px;
