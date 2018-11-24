@@ -34,10 +34,10 @@ text-decoration: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 10px;
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 1.15rem;
   }
   @media (min-width: 1024px) {
-    font-size: 25px;
+    font-size: 1.5rem;
   }  
 `
 
@@ -72,7 +72,7 @@ export const HorizontalMenu = styled.div`
 
 export const HamburgerMenu = styled.div`
     position: absolute;
-    top: 4rem;
+    top: 2.5rem;
     right: 2rem;
   & > div {
     width: 30px;

@@ -64,9 +64,6 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 0 0 1rem;
-  /* width: 70%; */
-  /* background-color: blue; */
-  /* height: 100%; */
   color: white;
 `
 
@@ -77,7 +74,6 @@ const Top = styled.div`
   
    @media (max-width: 768px) {
     flex-direction: column;
-    /* width: 100%; */
   }
 
 `
@@ -127,6 +123,7 @@ const Bottom = styled.div`
     width: 100%;
     span {
       display: none;
+      /* font-size: 0.5rem; */
     }
   }
 
@@ -136,9 +133,9 @@ const Li =styled.li`
   width: auto;
   margin: 0.5rem 0px 0.5rem 0px;
   
-  @media(max-width: 768px) {
-    /* padding-left: 10px; */
-    /* border-left: 5px solid #CE1715; */
+    @media(max-width: 768px) {
+      /* padding-left: 10px; */
+      /* border-left: 5px solid #CE1715; */
   }
 
 
@@ -191,9 +188,9 @@ const Footer = (data) => (
             {
               navigation.map((item, i) => (
                 <Li key={`footer_li${i}`}>
-                  <Link style={{color: 'white',fontFamily: 'Sagoe UI', fontSize: '1.5rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
+                  <Link style={{color: 'white',fontFamily: 'Sagoe UI', fontSize: '1rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
                     {item.name} 
-                    {(navigation[i+1]) ? <span style={{color: '#CE1715', padding: '0 5px 0 5px'}}> | </span> : ''}
+                    {(navigation[i+1]) ? <span style={{color: '#CE1715', padding: '0 0.3rem 0 0.3rem'}}> | </span> : ''}
                   </Link>
                 </Li>
                 )
