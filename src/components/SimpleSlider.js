@@ -25,9 +25,8 @@ const P = styled.p`
   font-family: Segoe UI;
   font-size: 1.4rem;
   line-height: 2.5rem;
-        font-weight: regular;
+  font-weight: regular;
   color: #707070;
-  text-justify: inter-word;
   
   ${this}::before{
     content: '"';
