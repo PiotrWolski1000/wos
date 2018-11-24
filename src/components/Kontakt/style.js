@@ -7,32 +7,31 @@ export const Wrapper = styled.div`
     width: 100%;
 
     color: #707070;
-    /* text-align: center; */
-    /* margin: 0 auto; */
-    /* background-color: green; */
-
 `
 
 export const ContactForm = styled.form`
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     input, textarea {
         padding:0.5rem;
         display: block;
         width: 500px;
-        margin: 1rem 0 1rem 0;
+       
         border-radius: 10px;
+
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* @media(max-width: 768px) {
-        input, textarea {
-
-            width: 80%;
-            margin: auto;
+    @media(max-width: 768px) {
+        input, textarea{
+            width: 300px;
         }
-    } */
+    }
 `
 
 export const Button = styled.button`
@@ -40,9 +39,10 @@ export const Button = styled.button`
     cursor: pointer;
     height: 55px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: 0 auto;
+
+    margin-top: 4rem;
 
     background-color: #E52321;
     border-radius: 25px;
@@ -50,10 +50,7 @@ export const Button = styled.button`
     text-align: center;
     
     color: white; 
-    font-size: 1.3rem;
-
-    
-    margin: 0 auto;
+    font-size: 1.5rem;
     
     @media (max-width: 500px) {
         font-size: 1.3rem;

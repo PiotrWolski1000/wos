@@ -6,8 +6,8 @@ const KontaktForm = () => (
         <form 
             name="contact"
             method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            // data-netlify="true"
+            // data-netlify-honeypot="bot-field"
         >
 
             <input name="name" type='text' placeholder="Name, Company name"/>
