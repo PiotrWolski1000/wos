@@ -5,10 +5,24 @@ import { StaticQuery, graphql } from 'gatsby'
 // import Img from 'gatsby-image'
 import Header from './Header/'
 import Footer from './Footer'
-// import styled from 'styled-components'
-import './layout.css'
-// import favicon from '../images/HeaderImage.png';
+import {createGlobalStyle} from 'styled-components'
+import regular from './../Assets/Fonts/segoeui.ttf'
+import quotFont from './../Assets/Fonts/pertibd.ttf'
 
+import './layout.css'
+
+
+
+createGlobalStyle`
+  @font-face {
+    font-family: 'SegoeUI';
+    src: url(${regular}) format('truetype');
+  };
+  @font-face {
+    font-family: 'Perpetua';
+    src: url(${quotFont}) format('truetype');
+  };
+` 
 
 
 const Layout = ({ children }) => (

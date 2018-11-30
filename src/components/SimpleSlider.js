@@ -22,15 +22,13 @@ const Wrapper = styled.div`
 `
 
 const P = styled.p`
-  font-family: Segoe UI;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  font-weight: regular;
   color: #707070;
   
   ${this}::before{
     content: '"';
-    font-family: Perpetua Titling MT;
+    font-family: 'Perpetua';    
     font-size:2.4em;
     color: black;
     position: relative;
@@ -38,7 +36,7 @@ const P = styled.p`
   }
   ${this}::after {
     content: '"';
-    font-family: Perpetua Titling MT;
+    font-family: 'Perpetua';
     font-size:2.4em;
     color: black;    
     position: relative;

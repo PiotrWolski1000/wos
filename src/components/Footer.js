@@ -188,7 +188,7 @@ const Footer = (data) => (
             {
               navigation.map((item, i) => (
                 <Li key={`footer_li${i}`}>
-                  <Link style={{color: 'white',fontFamily: 'Sagoe UI', fontSize: '1rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
+                  <Link style={{color: 'white', fontSize: '1rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
                     {item.name} 
                     {(navigation[i+1]) ? <span style={{color: '#CE1715', padding: '0 0.3rem 0 0.3rem'}}> | </span> : ''}
                   </Link>

@@ -31,7 +31,7 @@ export const LogoImg = styled(Img)`
 export const StyledLink = styled(Link)`
 text-decoration: none;
   color: #707070;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   margin: 10px;
   @media (min-width: 768px) {
     font-size: 1.15rem;
