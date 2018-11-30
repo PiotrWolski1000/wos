@@ -19,7 +19,7 @@ createGlobalStyle`
     src: url(${regular}) format('truetype');
   };
   @font-face {
-    font-family: 'Perpetua';
+    font-family: 'Perpetua Titling MT';
     src: url(${quotFont}) format('truetype');
   };
 ` 

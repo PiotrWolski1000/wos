@@ -28,7 +28,7 @@ const P = styled.p`
   
   ${this}::before{
     content: '"';
-    font-family: 'Perpetua';    
+    font-family: 'Perpetua Titling MT';    
     font-size:2.4em;
     color: black;
     position: relative;
@@ -36,7 +36,7 @@ const P = styled.p`
   }
   ${this}::after {
     content: '"';
-    font-family: 'Perpetua';
+    font-family: 'Perpetua Titling MT';
     font-size:2.4em;
     color: black;    
     position: relative;
