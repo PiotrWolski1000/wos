@@ -10,13 +10,10 @@ const Wrapper = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    /* justify-content: space-around; */
     align-items: center;
     margin: 50px 0 50px 0;
     @media (max-width: 1024px) {
         flex-direction:column;
-        /* justify-content: center;
-        align-items: center; */
     }
 
 `
@@ -59,7 +56,6 @@ const Content = styled.div`
     p {
         text-align: justify;
         color: #707070;
-        font-family: Segoe UI;
         font-size: 1.5rem;
         line-height: 1.5rem;
         text-indent: 1em;

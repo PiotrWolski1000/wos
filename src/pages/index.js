@@ -4,8 +4,6 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import MainImage from '../components/MainImage'
 import MainText from '../components/MainText'
-import Image from '../components/image'
-import Img from "gatsby-image"
 import {graphql} from 'gatsby'
 import Insel from '../components/Insel'
 import SimpleSlider from '../components/SimpleSlider'

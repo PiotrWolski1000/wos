@@ -109,7 +109,7 @@ class Header extends React.Component {
                     navigation.map((item, i) => {  
                     if(windowGlobal && '/'+window.location.href.split('/').pop()   === item.path){
                       return(
-                      <El.StyledLink  style = {{color: 'black', paddingLeft: '5px', borderLeft: 'red solid 4px'}}key = {`menu_link${i}`} to={item.path}> 
+                      <El.StyledLink  style = {{color: 'black', paddingLeft: '5px', fontWeight: 'bold', borderLeft: 'red solid 4px'}}key = {`menu_link${i}`} to={item.path}> 
                         
                         {item.name}
                       
