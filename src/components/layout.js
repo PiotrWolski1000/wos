@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './Header/'
 import Footer from './Footer'
+
 import {createGlobalStyle} from 'styled-components'
 import regular from './../Assets/Fonts/segoeui.ttf'
 import quotFont from './../Assets/Fonts/pertibd.ttf'
@@ -14,12 +15,16 @@ import './layout.css'
 
 createGlobalStyle`
   @font-face {
-    font-family: 'SegoeUI';
-    src: url(${regular}) format('truetype');
+    font-family: "Segoe-UI";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI") url(${regular}) format('ttf');
   };
   @font-face {
-    font-family: 'Perpetua Titling MT';
-    src: url(${quotFont}) format('truetype');
+    font-family: "Perpetua-Titling-MT";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Perpetua Titling MT") url(${quotFont}) format('ttf');
   };
 ` 
 

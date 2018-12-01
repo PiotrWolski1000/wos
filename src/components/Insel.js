@@ -29,8 +29,7 @@ const InselImg = styled(Img)`
         color: #707070;
         position: relative;
         bottom: 0px;
-        font-weight: 430;
-        font-family: Segoe UI;
+        /* font-weight: 430; */
 
         @media(max-width: 600px) {
             font-size: 7rem;
@@ -172,11 +171,7 @@ const WhiteCircle = styled.div`
 
     @media(max-width: 425px){
         top: -6px;
-        
-
     }
-
-
 `
 const Oder = styled.div`
     height: 100px;
