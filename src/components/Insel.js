@@ -170,8 +170,10 @@ const WhiteCircle = styled.div`
     top:-4px;
     left: -6px;
 
-    img {
-        background-color: pink;
+    @media(max-width: 425px){
+        top: -6px;
+        
+
     }
 
 
@@ -189,6 +191,10 @@ const ImgIcon = styled.img`
     left:20px;
     width: 20px;
     height: 20px;
+    @media(max-width: 425px){
+        top: 0px;
+        left: 18px;
+    }
 `
 
 const Insel = () => (

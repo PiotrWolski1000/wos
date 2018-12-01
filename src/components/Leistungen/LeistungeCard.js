@@ -53,9 +53,6 @@ const Right = styled.div`
 `
 
 export default class LeistungeCard extends React.Component {
-    constructor(props){
-        super(props)
-    }
     render(){
         return(
             <CardWrapper>

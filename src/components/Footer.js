@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import Img from "gatsby-image"
-import {StaticQuery, graphql} from 'gatsby'
 import Map from '../components/Map'
 
 const navigation = [
@@ -26,11 +24,9 @@ const navigation = [
 
 const Wrapper = styled.div`
     display: block;
-    /* height: 300px;*/ 
     height: auto;
     width: 100%;
     color: #707070;
-    /* background-color: #E52321; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -83,7 +79,6 @@ const Left = styled.div`
   margin-right: 50px;
   
   @media (max-width: 768px) {
-      /* padding-bottom: 50px; */
       width: 100%;
     }
 
@@ -123,43 +118,25 @@ const Bottom = styled.div`
     width: 100%;
     span {
       display: none;
-      /* font-size: 0.5rem; */
     }
   }
 
 `
 const Li =styled.li`
-
   width: auto;
   margin: 0.5rem 0px 0.5rem 0px;
-  
     @media(max-width: 768px) {
-      /* padding-left: 10px; */
-      /* border-left: 5px solid #CE1715; */
-  }
-
-
-  ${this}:hover{
-    text-decoration: underline;
   }
 `
 
-const StyledLink = styled(Link)`
-  color: white !important;
-  text-decoration: none;
-
-
-  ${this}:visited{
-    color: #707070;
-  }
-
+const FooterLink = styled(Link)`
   ${this}:hover {
-    border-bottom: 5px solid #E52321;
+    text-decoration: underline !important;
   }
 `
 
 
-const Footer = (data) => (
+const Footer = () => (
   <Wrapper className="footer">
     <LightUp>
       <ContentWrapper>
@@ -184,19 +161,17 @@ const Footer = (data) => (
           </Right>
         </Top>
         <Bottom>
-          {/* <ul> */}
             {
               navigation.map((item, i) => (
                 <Li key={`footer_li${i}`}>
-                  <Link style={{color: 'white', fontSize: '1rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
+                  <FooterLink style={{color: 'white', fontSize: '1rem', textDecoration: 'none'}} key = {`footer_link${i}`} to={item.path}>
                     {item.name} 
+                  </FooterLink>
                     {(navigation[i+1]) ? <span style={{color: '#CE1715', padding: '0 0.3rem 0 0.3rem'}}> | </span> : ''}
-                  </Link>
                 </Li>
                 )
               )
             }
-            {/* </ul> */}
         </Bottom>
       </ContentWrapper>
     </LightUp>
