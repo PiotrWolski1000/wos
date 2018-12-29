@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const CardWrapper = styled.div`
-        width: 100%;
+    width: 100%;
     text-align: left;
     height: auto;
     margin: 0.5rem 0 0.5rem 0;
@@ -24,6 +24,7 @@ const CardWrapper = styled.div`
 
 const Left = styled.div`
     width: 50%;
+    transform: scale(0.95);
     @media(max-width: 600px){
         width: 100%;
     }
@@ -32,6 +33,15 @@ const Left = styled.div`
 
     }
     
+
+    ${this}:hover{
+        transform: scale(1);
+    }
+    ${this}:focus{
+        transform: scale(1);
+    }
+
+    transition: all .5s;
 `
 
 const H2 = styled.h2`
