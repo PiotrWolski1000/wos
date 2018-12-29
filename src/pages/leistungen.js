@@ -39,7 +39,7 @@ const Leistungen = (data) => (
 export const indexQuery = graphql`
 query LeistungenQuery {
   
-  image0: file(relativePath: { eq: "gartenpflege.jpg" }) {
+  image0: file(relativePath: { eq: "builder.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 500) {
         ...GatsbyImageSharpFluid
