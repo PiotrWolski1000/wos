@@ -20,10 +20,6 @@ const navigation = [
     path: '/leistungen'
   },
   {
-    name: 'Preise',
-    path: '/preise'
-  },
-  {
     name: 'Jobs',
     path: '/jobs'
   },
@@ -42,7 +38,6 @@ class Header extends React.Component {
   UNSAFE_componentWillMount(){
     const path = windowGlobal ? windowGlobal.location.pathname : false
     this.setState(prevState => ({path: path}))
-    console.log('path'+path)
     
   }
 
@@ -80,26 +75,17 @@ class Header extends React.Component {
                   <div />
                   <div />
                 </El.HamburgerMenu>
+               
                 <El.HorizontalMenu>
                   {
-                    navigation.map((item, i) => {  
-                      if(windowGlobal && '/' + window.location.href.split('/').pop()   === item.path){
-                        return(
-                        <El.StyledLink  style = {{color: 'black', paddingLeft: '5px', borderBottom: 'red solid 4px'}}key = {`menu_desktop_link${i}`} to={item.path}> 
-                          { console.log(window.location.href.split('/').pop())}
-                          {item.name}
-                        
-                        </El.StyledLink>
-                        )
-                      } else {
+                    navigation.map((item, i) => {
                         return (
-                          <El.StyledLink  key = {`menu_desktop_link${i}`} to={item.path}> 
+                          <El.StyledLink activeStyle={{color: 'black', paddingLeft: '5px', borderBottom: 'red solid 4px'}} key = {`menu_desktop_link${i}`} to={item.path}> 
                             
                             {item.name}
                           
                           </El.StyledLink>)
-                      }   
-                    }
+                      }
                   )
                   }
                 </El.HorizontalMenu>
@@ -107,23 +93,13 @@ class Header extends React.Component {
               <El.Menu  isVisible={collapsed}>
                   {
                     navigation.map((item, i) => {  
-                    if(windowGlobal && '/'+window.location.href.split('/').pop()   === item.path){
-                      return(
-                      <El.StyledLink  style = {{color: 'black', paddingLeft: '5px', borderLeft: 'red solid 4px'}}key = {`menu_link${i}`} to={item.path}> 
-                        
-                        {item.name}
-                      
-                      </El.StyledLink>
-                      )
-                    } else {
                       return (
-                        <El.StyledLink  key = {`menu_link${i}`} to={item.path}> 
+                        <El.StyledLink  activeStyle = {{color: 'black', paddingLeft: '5px', borderLeft: 'red solid 4px'}} key = {`menu_link${i}`} to={item.path}> 
                           
                           {item.name}
                         
                         </El.StyledLink>)
-                    }   
-                  }
+                    }
                 )
                   }
               </El.Menu>
