@@ -89,6 +89,16 @@ const Button1 = styled.button`
     font-size: 1.3rem;
     cursor: pointer;
 
+    &:hover{
+        text-decoration: underline;
+    }
+
+    ${this}:active{
+        background-color: #CE1715;
+        color: white;
+        text-decoration: none !important;
+        transition: all 0.25s ease;
+    }
      @media (max-width: 500px) {
         font-size: 1.3rem;
         min-width: 200px;
@@ -109,6 +119,7 @@ const Button1 = styled.button`
 
 `
 const Button2 = styled.button`
+
     all: initial;
     cursor: pointer;
     height: 55px;
@@ -124,7 +135,16 @@ const Button2 = styled.button`
     
     color: white; 
     font-size: 1.3rem;
+    &:hover{
+        text-decoration: underline;
+    }
 
+    ${this}:active{
+        background-color: #CE1715;
+        color: white;
+        text-decoration: none !important;
+        transition: all 0.25s ease;
+    }
     
 
     
@@ -175,6 +195,7 @@ const WhiteCircle = styled.div`
 `
 const Oder = styled.div`
     height: 100px;
+    color: #707070 !important;
     display: flex;
     font-size: 1.2rem;
     justify-content: center;
