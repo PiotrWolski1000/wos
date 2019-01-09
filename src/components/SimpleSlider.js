@@ -10,6 +10,12 @@ const Description = [
   {
     text: 'Service sehr schnell und richtig gemacht.',
   },
+  {
+    text: 'Sehr professionelle Arbeit, ich bin beeindruckt.'
+  },
+  {
+    text: 'Vielen Dank für Ihre Hilfe, ich weiß nicht, wie ich ohne Sie auskommen könnte.'
+  }
 ]
 
 const Wrapper = styled.div`
