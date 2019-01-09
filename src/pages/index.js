@@ -12,7 +12,7 @@ const IndexPage = (data) => (
   <Layout>
     <MainImage></MainImage>
     <MainText></MainText>
-    <Insel></Insel>
+    <Insel/>
      <div style={{width: '100%'}}>
       <SimpleSlider/>
 
