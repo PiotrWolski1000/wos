@@ -4,22 +4,44 @@ import Layout from '../components/layout'
 import {graphql} from 'gatsby'
 import SimpleSlider from '../components/SimpleSlider'
 import KontaktForm from '../components/Kontakt/'
+import styled from 'styled-components'
+
+const Div = styled.div`
+  display: flex;
+  padding-left: 1rem;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 300px; */
+  @media(min-width: 320px){
+        width: 250px;
+    }
+    @media(min-width: 425px){
+        width: 350px;
+    }
+    @media(min-width: 768px){
+        width: 500px;
+    }
+    @media(min-width: 1024px){
+        width: 768px;
+    }
+`
 
 const Kontakt = (data) => (
   <Layout>
-    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+    <Div>
       <h2 style={{fontSize: '2.25rem'}}>
         Kontakt
       </h2>
-      <div style={{padding: '0 1rem 0 1rem', margin: '1rem 0 2rem 0', textIndent: '50px', maxWidth: '500px'}}>
-        <i>
-          Hier finden Sie wichtige Informationen, mit denen Sie uns kontaktieren können.
-        </i>
-      </div>
-    <div>
 
       <div>
-          <p>
+        <div style={{textIndent: '2rem', marginBottom: '3rem'}}>
+          <i>
+            Hier finden Sie alle wichtige Informationen, mit denen Sie uns kontaktieren können.
+          </i>
+        </div>
+        <p>
             <b>
               Name: 
             </b>
@@ -34,7 +56,6 @@ const Kontakt = (data) => (
             </b>
             Buurnstrat 51,  25938 Oevenum auf Föhr
           </p>
-        </div>
         
         
         <p>
@@ -55,8 +76,10 @@ const Kontakt = (data) => (
             Hausmeister.sikorski@web.de
           </span>
         </p>   
+
       </div>
-    </div>
+    </Div>
+
 
     <KontaktForm/>  
     <SimpleSlider/>
