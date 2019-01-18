@@ -5,7 +5,7 @@ const UnsereLeistungen = (data) => {
 
     const Description = [
         {title: 'Haus hilfe',
-        jobs: ['Entrümpelung','Hausbetreuung','Entleerung von Häusern und Kellern','Kleine Reparatur und Montagearbeiten'],
+        jobs: ['Kleine Reparatur und Montagearbeiten', 'Entrümpelung','Hausbetreuung','Entleerung von Häusern und Kellern',],
         image: data.data.data.image0.childImageSharp.fluid,
         id: 0,
       },
@@ -19,7 +19,7 @@ const UnsereLeistungen = (data) => {
         image: data.data.data.image2.childImageSharp.fluid,
         id: 2,},
         {title: 'Gartenpflege',
-        jobs: ['Mülltonendienst', 'Hauswirtschaft', 'Gartenpflege'],
+        jobs: ['Gartenpflege', 'Mülltonendienst', 'Hauswirtschaft', ],
         image: data.data.data.image3.childImageSharp.fluid,
         id: 3,
       },
