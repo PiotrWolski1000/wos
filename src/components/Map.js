@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 const map  = () => (
   <Wrapper>
     <Map center={[54.711860, 8.530739]} zoom={12} >
-      <Marker anchor={[54.736557, 8.498252]} payload={1} onClick={({ event, anchor, payload }) => {}} />
+      <Marker anchor={[54.710732, 8.530905]} payload={1} onClick={({ event, anchor, payload }) => {}} />
 
       {/* <Overlay anchor={[54.736557, 8.498252]} offset={[120, 79]}>
       </Overlay> */}
