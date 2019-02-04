@@ -19,12 +19,21 @@ export const Wrapper = styled.div`
 
 export const LogoImg = styled(Img)`
   margin-left: 2rem;
-  width:75px;
-  height:75px;
+  /* width:200px;
+  height:200px; */
+  margin: 2rem;
   cursor: pointer;
-  @media(min-width: 768px){
+  @media(min-height: 500px){
     width: 100px;
     height: 100px;
+  }
+  @media(min-width: 768px){
+    width: 150px;
+    height: 150px;
+  }
+  @media(min-height: 1024px){
+    width: 200px;
+    height: 200px;
   }
 `
 

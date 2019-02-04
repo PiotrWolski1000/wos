@@ -53,7 +53,7 @@ class Header extends React.Component {
         query HeaderQuery {
           file(relativePath: {eq: "headerImage.png"}) {
             childImageSharp {
-                fluid(maxWidth: 100) {
+                fluid(maxWidth: 200) {
                   ...GatsbyImageSharpFluid
                 }
             }
