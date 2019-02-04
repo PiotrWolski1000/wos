@@ -53,7 +53,7 @@ const Content = styled.div`
     justify-content: space-around;
     align-items: center; 
     p {
-        text-align: justify;
+        /* text-align: justify; */
         color: #707070;
         font-size: 1.5rem;
         line-height: 1.5rem;
@@ -62,16 +62,12 @@ const Content = styled.div`
 
     }
     @media (max-width: 768px) {
-        p {
-            margin: 2.5em 0 2.5em 0;
-        }
+        margin: 4rem 0 2.5rem 0;   
     }
 
     @media (max-width: 1024px) {
         width: 80%;
-        p {
-            margin: 2.5em 0 2.5em 0;
-        }
+        margin: 4rem 0 2.5rem 0;
     }
 
 
@@ -233,11 +229,6 @@ const Insel = () => (
             {/* <h3 style={{position:'relative',color: 'black', backgroundColor:'red'}}>Föhr</h3> */}
             <InselImg  fluid={data.file.childImageSharp.fluid} />
             <Content>
-                <p>
-                    Unsere Dienstleistungen 
-                    decken die gesamte Insel
-                    Föhr ab!
-                </p>
                 <Link to={'/kontakt'} style={{textDecoration: 'none'}}>
                     <Button1>
                         <RelativeDiv>
