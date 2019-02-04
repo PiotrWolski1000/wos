@@ -23,29 +23,30 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  &:focus{
+    outline: none !important;
+  }
 `
 
-const P = styled.p`
-  font-family: 'Segoe UI';
+const Q = styled.blockquote`
   font-size: 1.4rem;
   line-height: 2.5rem;
   color: #707070;
-  
+  quotes: "\201C""\201D""\2018""\2019" !important;
+
   ${this}::before{
-    content: '"';
-    font-family: 'Perpetua Titling MT';    
+    content: open-quote !important;
     font-size:2.4em;
     color: black;
     position: relative;
     top: 0.5rem;
   }
   ${this}::after {
-    content: '"';
-    font-family: 'Perpetua Titling MT';
+    content: close-quote !important;
     font-size:2.4em;
     color: black;    
     position: relative;
-    top: 2.8rem;
+    top: 2.0rem;
     left: 0.3rem;
   }
   
@@ -83,7 +84,8 @@ export default class SimpleSlider extends Component {
               <div key={`div_slider_${i}`}>
                 <Wrapper>
                     <AddWrap key={`add_wrap${i}`}>
-                      <P key={`add_wrap_p${i}`}>{item.text}</P>
+                      
+                        <Q key={`add_wrap_p${i}`}>{item.text}</Q>
                     </AddWrap>
                 </Wrapper>
               </div>
