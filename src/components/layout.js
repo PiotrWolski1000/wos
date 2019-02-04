@@ -8,13 +8,21 @@ import Footer from './Footer'
 import {createGlobalStyle} from 'styled-components'
 import regular from './../Assets/Fonts/segoeui.ttf'
 import quotFont from './../Assets/Fonts/pertibd.ttf'
-
+import robotoLight from './../Assets/Fonts/Roboto-Light.ttf'
 import './layout.css'
 
 
 
 createGlobalStyle`
-  @font-face {
+  /* @font-face {
+    font-family: 'RobotoLight';
+    src: url(${robotoLight});
+  } */
+
+  /* @font-face{
+   src:url('${robotoLight}') format('truetype') !important;
+  } */
+  /* @font-face {
     font-family: "Segoe-UI";
     font-style: normal;
     font-weight: normal;
@@ -25,7 +33,7 @@ createGlobalStyle`
     font-style: normal;
     font-weight: bold;
     src: local("Perpetua Titling MT") url(${quotFont}) format('ttf');
-  };
+  }; */
 ` 
 
 
