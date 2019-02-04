@@ -157,11 +157,10 @@ const Footer = () => (
             <p style={{color: '#491818', fontSize: '1.5rem'}}> Telefon </p>
             <p> +0151 7131 7746 </p>
             <p style={{color: '#491818', fontSize: '1.5rem'}}> E-mail </p>
-<<<<<<< HEAD
+
             <p style={{fontSize: '1.1rem'}}> HausmeisterService.Sikorski@web.de</p>
-=======
-            <p> HausmeisterService.Sikorski@web.de</p>
->>>>>>> 79514a9bbab35463a0624051edb5ebb46eb79427
+            
+            
           </Right>
         </Top>
         <Bottom>
