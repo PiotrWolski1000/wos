@@ -19,7 +19,9 @@ const Description = [
 ]
 
 const Wrapper = styled.div`
-  font-size:100%; 
+  /* font-size:100%;  */
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
