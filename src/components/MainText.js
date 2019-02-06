@@ -6,13 +6,19 @@ const Wrapper = styled.div`
     display: block; 
     height: auto;
     width: 100%;
-    /* color: #707070; */
+    
     margin: 2rem 0 0.5rem 0;
     font-size: 1.4rem;
     padding: 0rem 1rem 0rem 1rem;
-    font-style: italic;
-    /* color: rgba(0,0,0,0.8); */
+    
+    @media(min-width: 768px){
+        font-size: 2rem;
+        line-height: 2rem;
+    }
     p {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
         text-align: left;
         color: #707070;
         text-justify: left;
@@ -24,13 +30,21 @@ const Wrapper = styled.div`
 const MainText = () => (
   <Wrapper>
         <p>
-        Hier finden Sie alle Informationen über unsere Dienstleistungen, die Sie
-        {" "} 
-        <Link to='/leistungen'>
-            hier 
-        </Link>
-        {" "}
-        überprüfen können.
+            Hier finden Sie alle Informationen über unsere Dienstleistungen, die Sie
+            {" "} 
+            <Link to='/leistungen'>
+                hier 
+            </Link>
+            {" "}
+            überprüfen können.
+        </p>
+        <p style={{marginTop: '3rem'}}>
+            Für weitere Informationen kontaktieren Sie uns bitte. Die Kontaktdaten finden Sie 
+            auf unserer {' '}
+            <Link to='/kontakt'>
+                Kontaktseite
+            </Link>
+            .
         </p>
   </Wrapper>
 )
