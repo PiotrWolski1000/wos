@@ -20,10 +20,6 @@ const navigation = [
     path: '/leistungen'
   },
   {
-    name: 'Jobs',
-    path: '/jobs'
-  },
-  {
     name: 'Kontakt',
     path: '/kontakt'
   }

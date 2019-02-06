@@ -57,7 +57,7 @@ export const Menu = styled.div`
   opacity: ${props => props.isVisible ? '1'  : '0'};
   flex-direction: column;
   visibility: ${props => props.isVisible ? 'visible'  : 'hidden'};
-  height: ${props => props.isVisible ? '275px'  : '0px'};
+  height: ${props => props.isVisible ? '200px'  : '0px'};
   transition: height 0.5s ease, visibility 0s;
 
   ul {
@@ -80,7 +80,7 @@ export const HorizontalMenu = styled.div`
 
 export const HamburgerMenu = styled.div`
     position: absolute;
-    top: 2.5rem;
+    top: 3.75rem;
     right: 2rem;
   & > div {
     width: 30px;
