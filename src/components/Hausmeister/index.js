@@ -24,8 +24,7 @@ class index extends Component {
                         </p>
                     </El.Left>
                     <El.Right src={hausmeisterImage}>
-
-                        {/* <Img fluid={this.props.image.imageHausmeister.childImageSharp.fluid}></Img>             */}
+                    
                     </El.Right>
                 </El.ContentWrapper>       
             </El.Wrapper>
