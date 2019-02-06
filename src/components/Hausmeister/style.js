@@ -2,32 +2,20 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
     width: 100%;
-    /* background-color: pink; */
     height: 600px;
-
-
 `
-
-// export const TopContent = styled.div`
-    // margin: 2rem 0 0.5rem 0;
-    // font-size: 1.4rem;
-    // padding: 0rem 1rem 0rem 1rem;
-    // font-style: italic;
-    // color: rgba(0,0,0,0.8);
-    // p {
-
-    //     text-justify: left;
-    //     text-indent: 2rem;
-
-    // }
-// `
 
 export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 500px;
 
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+
     @media(min-width: 768px){
+        border-top: 2px solid rgba(0,0,0,0.2);
         flex-direction: row;
     }
 `
@@ -57,12 +45,6 @@ export const Left = styled.div`
 `
 
 export const Right = styled.div`
-    
-    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-
-
     display: block;
     height: 50%;
     width: 100%;
