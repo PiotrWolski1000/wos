@@ -8,16 +8,12 @@ import Insel from '../components/Insel'
 import SimpleSlider from '../components/SimpleSlider'
 import Hausmeister from '../components/Hausmeister/'
 import Link from 'gatsby-link'
-import Test from './../components/Test/'
 
 const IndexPage = ({data}) => (
   <Layout>
     <MainImage></MainImage>
     <MainText></MainText>
-    <Test></Test>
-    {/* {console.log('my data: ',{data})}
-    {console.log(data.imageHausmeister.childImageSharp.fluid)} */}
-    {/* <Hausmeister image={data}/> */}
+
     <Insel/>
      <div style={{width: '100%'}}>
       <SimpleSlider/>
