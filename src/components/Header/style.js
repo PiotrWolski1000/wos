@@ -20,9 +20,6 @@ export const Wrapper = styled.div`
 export const LogoImg = styled(Img)`
   margin-left: 2rem;
 
-  width:200px;
-  height:200px;
-  
   margin: 2rem;
   cursor: pointer;
   @media(min-height: 500px){
