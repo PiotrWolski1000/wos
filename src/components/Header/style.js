@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   min-height: 120px ;
-  height: auto;
+  /* height: auto; */
   width: 100%;
   color: #707070;
   background-color: #FFFFFF;
@@ -19,8 +19,10 @@ export const Wrapper = styled.div`
 
 export const LogoImg = styled(Img)`
   margin-left: 2rem;
-  /* width:200px;
-  height:200px; */
+
+  width:200px;
+  height:200px;
+  
   margin: 2rem;
   cursor: pointer;
   @media(min-height: 500px){
@@ -107,7 +109,7 @@ export const HamburgerMenu = styled.div`
       display: none;
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `
