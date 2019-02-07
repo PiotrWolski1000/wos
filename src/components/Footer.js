@@ -95,6 +95,10 @@ const Right = styled.div`
     font-size: 1.3rem;
   }
 
+  @media(min-width: 769px){
+    width: 40%;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 50px;
@@ -158,7 +162,7 @@ const Footer = () => (
             <p> +0151 7131 7746 </p>
             <p style={{color: '#491818', fontSize: '1.5rem'}}> E-mail </p>
 
-            <p style={{fontSize: '1.1rem'}}> HausmeisterService.Sikorski@web.de</p>
+            <p style={{fontSize: '1.3rem'}}> HausmeisterService.Sikorski@web.de</p>
             
             
           </Right>
