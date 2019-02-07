@@ -49,8 +49,8 @@ class Header extends React.Component {
         query HeaderQuery {
           file(relativePath: {eq: "headerImage.png"}) {
             childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 150) {
+                  ...GatsbyImageSharpFixed
                 }
             }
         }
@@ -60,7 +60,7 @@ class Header extends React.Component {
             <El.MainWrapper>
               <El.Wrapper className="header">
                 <Link to = '/'>
-                  <El.LogoImg fluid={data.file.childImageSharp.fluid} />
+                  <El.LogoImg fixed={data.file.childImageSharp.fixed} />
                 </Link>
 
                 <El.HamburgerMenu

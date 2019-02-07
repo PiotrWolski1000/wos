@@ -18,9 +18,9 @@ export const Wrapper = styled.div`
 `
 
 export const LogoImg = styled(Img)`
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
 
-  margin: 2rem;
+  margin: 1rem;
   cursor: pointer;
   @media(min-height: 500px){
     width: 100px;
@@ -79,7 +79,8 @@ export const HorizontalMenu = styled.div`
 
 export const HamburgerMenu = styled.div`
     position: absolute;
-    top: 3.75rem;
+    top: 4.2rem;
+    /* top: 3.85rem; */
     right: 2rem;
   & > div {
     width: 30px;
