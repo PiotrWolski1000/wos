@@ -8,24 +8,24 @@ import styled from 'styled-components'
 
 const Div = styled.div`
   display: flex;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* max-width: 300px; */
+
   @media(min-width: 320px){
         width: 250px;
-    }
-    @media(min-width: 425px){
-        width: 350px;
-    }
-    @media(min-width: 768px){
-        width: 500px;
-    }
-    @media(min-width: 1024px){
-        width: 768px;
-    }
+  }
+  @media(min-width: 425px){
+      width: 350px;
+  }
+  @media(min-width: 768px){
+      width: 500px;
+  }
+  @media(min-width: 1024px){
+      width: 768px;
+  }
 `
 
 const Kontakt = (data) => (
