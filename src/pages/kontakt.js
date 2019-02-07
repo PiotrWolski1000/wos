@@ -8,24 +8,24 @@ import styled from 'styled-components'
 
 const Div = styled.div`
   display: flex;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* max-width: 300px; */
+
   @media(min-width: 320px){
         width: 250px;
-    }
-    @media(min-width: 425px){
-        width: 350px;
-    }
-    @media(min-width: 768px){
-        width: 500px;
-    }
-    @media(min-width: 1024px){
-        width: 768px;
-    }
+  }
+  @media(min-width: 425px){
+      width: 350px;
+  }
+  @media(min-width: 768px){
+      width: 500px;
+  }
+  @media(min-width: 1024px){
+      width: 768px;
+  }
 `
 
 const Kontakt = (data) => (
@@ -43,7 +43,7 @@ const Kontakt = (data) => (
         </div>
         <p>
             <b>
-              Name: 
+              Name:{' '} 
             </b>
             WoS Hausmeister Service auf Föhr
           </p>
@@ -52,7 +52,7 @@ const Kontakt = (data) => (
           </p>
           <p>
             <b>
-              Adresse: 
+              Adresse:{' '}
             </b>
             Buurnstrat 51,  25938 Oevenum auf Föhr
           </p>
@@ -60,7 +60,7 @@ const Kontakt = (data) => (
         
         <p>
           <b>
-            Telefonnumer: 
+            Telefonnumer:{' '} 
           </b>
           <span>
             +0151 7131 7746
@@ -69,7 +69,7 @@ const Kontakt = (data) => (
 
         <p>
           <b>
-            E-mail:
+            E-mail:{' '}
           </b> 
 
           <span>
