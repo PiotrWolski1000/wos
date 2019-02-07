@@ -43,7 +43,7 @@ const Kontakt = (data) => (
         </div>
         <p>
             <b>
-              Name: 
+              Name:{' '} 
             </b>
             WoS Hausmeister Service auf Föhr
           </p>
@@ -52,7 +52,7 @@ const Kontakt = (data) => (
           </p>
           <p>
             <b>
-              Adresse: 
+              Adresse:{' '}
             </b>
             Buurnstrat 51,  25938 Oevenum auf Föhr
           </p>
@@ -60,7 +60,7 @@ const Kontakt = (data) => (
         
         <p>
           <b>
-            Telefonnumer: 
+            Telefonnumer:{' '} 
           </b>
           <span>
             +0151 7131 7746
@@ -69,7 +69,7 @@ const Kontakt = (data) => (
 
         <p>
           <b>
-            E-mail:
+            E-mail:{' '}
           </b> 
 
           <span>
