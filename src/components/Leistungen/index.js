@@ -4,21 +4,26 @@ import LeistungeCard from './LeistungeCard'
 const UnsereLeistungen = (data) => {
 
     const Description = [
-        {title: 'Haus hilfe',
+      {
+        title: 'Reinigungsdienst',
+        jobs: ['Büro-, Haus-, Ferienobjektenreinigung', 'Bauschlussreinigung', 'Grundreinigung'],
+        image: data.data.data.image2.childImageSharp.fluid,
+        id: 2,
+      },
+      {
+        title: 'Haus hilfe',
         jobs: ['Kleine Reparatur und Montagearbeiten', 'Entrümpelung','Hausbetreuung','Entleerung von Häusern und Kellern',],
         image: data.data.data.image0.childImageSharp.fluid,
         id: 0,
       },
-        {title: 'Hausarbeit',
+      {
+        title: 'Hausarbeit',
         jobs: ['Malen', 'Tapezieren', 'Trockenbau'],
         image: data.data.data.image1.childImageSharp.fluid,
         id: 1,
-        },
-        {title: 'Reinigungsdienst',
-        jobs: ['Büro-, Haus-, Ferienobjektenreinigung', 'Bauschlussreinigung', 'Grundreinigung'],
-        image: data.data.data.image2.childImageSharp.fluid,
-        id: 2,},
-        {title: 'Gartenpflege',
+      },
+      {
+        title: 'Gartenpflege',
         jobs: ['Gartenpflege', 'Mülltonendienst', 'Hauswirtschaft', ],
         image: data.data.data.image3.childImageSharp.fluid,
         id: 3,
