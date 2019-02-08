@@ -73,7 +73,7 @@ const Kontakt = (data) => (
           </b> 
 
           <span>
-            Hausmeister.sikorski@web.de
+            HausmeisterService.Sikorski@web.de
           </span>
         </p>   
 
