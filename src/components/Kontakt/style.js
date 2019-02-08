@@ -16,11 +16,8 @@ export const Wrapper = styled.div`
     h3 {
         margin-top: 100px;
     }
-
-`
-
-export const Form = styled.form`
-    display: flex;
+    form{
+        display: flex;
     flex-direction: column;
     margin-top: 5rem;
     @media(min-width: 320px){
@@ -75,58 +72,58 @@ export const Form = styled.form`
         opacity: 1;
         transition: opacity 0.5s ease; 
     }
+    button{
+        all: initial;
+        cursor: pointer;
+        height: 55px;
+
+        display: block;
+        margin: 0 auto;
+
+        margin-top: 4rem;
+
+        background-color: #E52321;
+        border-radius: 25px;
+
+        text-align: center;
+        
+        color: white; 
+        font-size: 1.5rem;
+        
+        @media (max-width: 500px) {
+            font-size: 1.3rem;
+            min-width: 200px;
+        }
+
+
+        @media (max-width: 768px) {
+            min-width:250px;
+        }
+
+        @media(min-width: 769px){
+            min-width: 300px;
+        }
+
+        @media(min-width: 1280px){
+            min-width: 400px;
+        }
+
+        -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+        outline: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        ${this}:active{
+            background-color: #CE1715;
+            color: white;
+            text-decoration: none !important;
+            transition: all 0.25s ease;
+        }
+        }
+    }
 `
 
-
-export const Button = styled.button`
-    all: initial;
-    cursor: pointer;
-    height: 55px;
-
-    display: block;
-    margin: 0 auto;
-
-    margin-top: 4rem;
-
-    background-color: #E52321;
-    border-radius: 25px;
-
-    text-align: center;
-    
-    color: white; 
-    font-size: 1.5rem;
-    
-    @media (max-width: 500px) {
-        font-size: 1.3rem;
-        min-width: 200px;
-    }
-
-
-    @media (max-width: 768px) {
-        min-width:250px;
-    }
-
-    @media(min-width: 769px){
-        min-width: 300px;
-    }
-
-     @media(min-width: 1280px){
-        min-width: 400px;
-    }
-
-    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    outline: none;
-
-    &:hover{
-        text-decoration: underline;
-    }
-
-    ${this}:active{
-        background-color: #CE1715;
-        color: white;
-        text-decoration: none !important;
-        transition: all 0.25s ease;
-    }
-`

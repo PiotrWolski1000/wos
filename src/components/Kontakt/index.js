@@ -96,7 +96,7 @@ class KontaktForm extends Component {
                         Kontaktformular
                     </h3>
 
-                    <El.Form 
+                    <form
                 
                         name="contact"
                         method="post"
@@ -109,7 +109,7 @@ class KontaktForm extends Component {
                         
                         <label htmlFor='name' className={this.state.nameFieldActive ? "field-active" : ""}>Name</label>
                         <input 
-                            name='name' 
+                            name='name'
                             type='text' 
                             value={this.state.name}
                             placeholder="Name, Firma Name"
@@ -168,10 +168,10 @@ class KontaktForm extends Component {
                             onChange={this.onChangeInput}
                             required
                         />
-                        <El.Button>
+                        <button>
                             Nachricht senden
-                        </El.Button>
-                    </El.Form>
+                        </button>
+                    </form>
             </El.Wrapper>
         );
     }
