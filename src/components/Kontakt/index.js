@@ -99,19 +99,7 @@ class KontaktForm extends Component {
                     <h3 style={{color: '#363636'}}>
                         Kontaktformular
                     </h3>
-{/*                     
- 
-                    <form name="contacttest" method="POST" data-netlify="true">
-                        <p>
-                            <label>Name <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                            <label>Email <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <button type="submit">Send</button>
-                        </p>
-                    </form> */}
+                    
                     <form
                         action='/kontakterfolg'
                         name="contact"
