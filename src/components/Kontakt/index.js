@@ -88,6 +88,10 @@ class KontaktForm extends Component {
 
       }
 
+    handleSubmit = e => {
+        
+    }
+
     render() {
         return (
             <El.Wrapper>
@@ -96,9 +100,21 @@ class KontaktForm extends Component {
                         Kontaktformular
                     </h3>
 
-                    <form
-                
+                    <form name="contacttest" netlify>
+                    <p>
+                        <label>Name <input type="text" name="name" /></label>
+                    </p>
+                    <p>
+                        <label>Email <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                    </form>
+                    {/* <form
+
                         name="contact"
+                        onSubmit={this.handleSubmit}
                         method="post"
                         netlify
                         data-netlify-honeypot="bot-field"
@@ -173,7 +189,7 @@ class KontaktForm extends Component {
                         >
                             Nachricht senden
                         </button>
-                    </form>
+                    </form> */}
             </El.Wrapper>
         );
     }
