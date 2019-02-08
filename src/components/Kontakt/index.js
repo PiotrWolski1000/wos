@@ -168,7 +168,9 @@ class KontaktForm extends Component {
                             onChange={this.onChangeInput}
                             required
                         />
-                        <button>
+                        <button
+                            type="submit"
+                        >
                             Nachricht senden
                         </button>
                     </form>
