@@ -2,6 +2,12 @@ import * as El from './style'
 
 import React, { Component } from 'react';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 class KontaktForm extends Component {
     constructor(props){
         super(props)
@@ -87,10 +93,20 @@ class KontaktForm extends Component {
         } 
 
       }
+    
+    
+      handleSubmit = e => {
+          const {name, email, phone, subject, message  } = this.state;
+        fetch("/kontakterfolg", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...{name, email, phone, subject, message} })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
 
-    handleSubmit = e => {
-        
-    }
+        e.preventDefault();
+      };
 
     render() {
         return (
