@@ -113,7 +113,7 @@ class KontaktForm extends Component {
                         </p>
                     </form> */}
                     <form
-
+                        action='/no-cache=1'
                         name="contact"
                         onSubmit={this.handleSubmit}
                         method="post"
