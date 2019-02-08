@@ -100,9 +100,7 @@ class KontaktForm extends Component {
                 
                         name="contact"
                         method="post"
-                        data-netlify="true"
-                        data-netlify-honeypot="bot-field"
-
+                        
                     >
                         
                         <input type="hidden" name="bot-field" />
