@@ -99,9 +99,9 @@ class KontaktForm extends Component {
                     <h3 style={{color: '#363636'}}>
                         Kontaktformular
                     </h3>
-                    
+
                     <form
-                        action='/kontakterfolg'
+                        action='/kontakterfolg?no-cache=1'
                         name="contact"
                         onSubmit={this.handleSubmit}
                         method="post"
