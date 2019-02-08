@@ -97,10 +97,13 @@ class KontaktForm extends Component {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
+
                     >
                     <h3 style={{color: '#363636'}}>
                         Kontaktformular
                     </h3>
+                        
+                        <input type="hidden" name="bot-field" />
                         <label htmlFor='name' className={this.state.nameFieldActive ? "field-active" : ""}>Name</label>
                         <input 
                             name='name' 
