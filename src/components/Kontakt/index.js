@@ -99,7 +99,75 @@ class KontaktForm extends Component {
                     <h3 style={{color: '#363636'}}>
                         Kontaktformular
                     </h3>
-
+                    <form 
+                        name="contact"
+                        method="post"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                    >   
+                        <input type = 'hidden' name="bot-field" />
+                        <label 
+                            htmlFor='name'
+                        >
+                            Name: 
+                        </label>
+                        <input 
+                            name="name" 
+                            type='text' 
+                            placeholder="Name, Company name"
+                        />
+                        
+                        <label 
+                            htmlFor='email'
+                        >
+                            Email: 
+                        </label>
+                        <input 
+                            name="email" 
+                            type="email" 
+                            placeholder="Email address"
+                        />
+                        
+                        <label 
+                            htmlFor='phone'
+                            name='phone'
+                        >
+                            Phone: 
+                        </label>                        
+                        <input 
+                            name="phone" 
+                            type="number" 
+                            placeholder="Phone number"
+                        />
+                        
+                        <label 
+                            htmlFor='mail_subject'
+                        >
+                            Mail subject: 
+                        </label>                        
+                        <input 
+                            name="mail_subject" 
+                            type="text" 
+                            placeholder="Mail subject"
+                        />
+                        
+                        <label 
+                            htmlFor='message'
+                        >
+                            Message: 
+                        </label>
+                        <textarea 
+                            name="message" 
+                            type="text" 
+                            rows="4" 
+                            cols="50" 
+                            placeholder="Message" 
+                        />
+                        <button type='submit'>
+                        Send
+                        </button>
+                    </form>
+{/* 
                     <form name="contacttest" method="POST" data-netlify="true">
                         <p>
                             <label>Name <input type="text" name="name" /></label>
@@ -110,7 +178,7 @@ class KontaktForm extends Component {
                         <p>
                             <button type="submit">Send</button>
                         </p>
-                    </form>
+                    </form> */}
                     {/* <form
 
                         name="contact"
