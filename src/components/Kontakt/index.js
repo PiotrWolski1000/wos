@@ -102,7 +102,17 @@ class KontaktForm extends Component {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...{name, email, phone, subject, message} })
         })
-          .then(() => alert("Success!"))
+          .then(() => {
+                // alert("Vielen Dank, die Nachricht wurde gesendet.")
+                this.setState({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    subject: '', 
+                    message: ''
+                })
+
+            })
           .catch(error => alert(error));
 
         e.preventDefault();
@@ -117,7 +127,7 @@ class KontaktForm extends Component {
                     </h3>
 
                     <form
-                        action='/kontakterfolg?no-cache=1'
+                        action='/kontakterfolg'
                         name="contact"
                         onSubmit={this.handleSubmit}
                         method="post"
