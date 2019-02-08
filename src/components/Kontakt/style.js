@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
     z-index: 0;
     color: #707070;
 
+    h3 {
+        margin-top: 100px;
+    }
+
 `
 
 export const Form = styled.form`
