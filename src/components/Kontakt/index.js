@@ -99,7 +99,7 @@ class KontaktForm extends Component {
                     <h3 style={{color: '#363636'}}>
                         Kontaktformular
                     </h3>
-                    
+{/*                     
  
                     <form name="contacttest" method="POST" data-netlify="true">
                         <p>
@@ -111,8 +111,8 @@ class KontaktForm extends Component {
                         <p>
                             <button type="submit">Send</button>
                         </p>
-                    </form>
-                    {/* <form
+                    </form> */}
+                    <form
 
                         name="contact"
                         onSubmit={this.handleSubmit}
@@ -190,7 +190,7 @@ class KontaktForm extends Component {
                         >
                             Nachricht senden
                         </button>
-                    </form> */}
+                    </form>
             </El.Wrapper>
         );
     }
