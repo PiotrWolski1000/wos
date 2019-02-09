@@ -1,5 +1,4 @@
 import * as El from './style'
-
 import React, { Component } from 'react';
 
 const encode = (data) => {
@@ -21,8 +20,8 @@ class KontaktForm extends Component {
             subjectFieldActive: false,
             subject: '',
             messageFieldActive: false,
-            message: ''
-
+            message: '',
+            messageSuccessfulSent: false,
         }
     }
 
@@ -96,7 +95,9 @@ class KontaktForm extends Component {
     
     
       handleSubmit = e => {
-          const {name, email, phone, subject, message  } = this.state;
+
+        const {name, email, phone, subject, message  } = this.state;
+        
         fetch("/kontakterfolg", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -109,7 +110,8 @@ class KontaktForm extends Component {
                     email: '',
                     phone: '',
                     subject: '', 
-                    message: ''
+                    message: '',
+                    messageSuccessfulSent: true,
                 })
 
             })
@@ -121,17 +123,25 @@ class KontaktForm extends Component {
     render() {
         return (
             <El.Wrapper>
+                    <El.Message style={{height: '0px'}} className={this.state.messageSuccessfulSent?'sentMessage':''}>
+                        <p style={{display: 'none'}}>
+                        Vielen Dank für Ihre Kontaktaufnahme, wir werden uns in Kürze mit Ihnen in Verbindung setzen.
+                        </p>
+                        <div className={'cross'} onClick={()=>{this.setState({messageSuccessfulSent: false})}}>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </El.Message>
                     
                     <h3 style={{color: '#363636'}}>
                         Kontaktformular
                     </h3>
 
                     <form
-                        action='/kontakterfolg'
                         name="contact"
                         onSubmit={this.handleSubmit}
                         method="post"
-                        netlify
+                        netlify = "true"
                         data-netlify-honeypot="bot-field"
 
                     >
@@ -193,7 +203,7 @@ class KontaktForm extends Component {
                             type="text" 
                             rows="4" 
                             cols="50" 
-                            placeholder="Message" 
+                            placeholder="Nachricht" 
                             onFocus={this.activateField}
                             onBlur={this.disableFocus}   
                             onChange={this.onChangeInput}
