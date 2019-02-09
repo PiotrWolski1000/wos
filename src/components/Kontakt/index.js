@@ -104,7 +104,6 @@ class KontaktForm extends Component {
           body: encode({ "form-name": "contact", ...{name, email, phone, subject, message} })
         })
           .then(() => {
-                // alert("Vielen Dank, die Nachricht wurde gesendet.")
                 this.setState({
                     name: '',
                     email: '',
