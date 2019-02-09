@@ -8,11 +8,11 @@ import styled from 'styled-components'
 
 const Div = styled.div`
   display: flex;
-  /* padding-left: 1rem; */
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 
   @media(min-width: 320px){
         width: 250px;
