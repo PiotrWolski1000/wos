@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import {graphql} from 'gatsby'
 import SimpleSlider from '../components/SimpleSlider'
@@ -30,6 +30,12 @@ const Div = styled.div`
 
 const Kontakt = (data) => (
   <Layout>
+
+    <Helmet>
+      <title>Kontakt</title>
+      <meta name="description" content="WoS Hausmeister & Reinigung Service auf Föhr. Kontakt uns via Telefonnumer, Email oder Kontaktformular." />
+    </Helmet>
+    
     <Div>
       <h2 style={{fontSize: '2.25rem'}}>
         Kontakt
