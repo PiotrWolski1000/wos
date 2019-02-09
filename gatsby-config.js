@@ -16,13 +16,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'WoS Hausmeister & Reinigung Service auf Föhr',
+        short_name: 'WoS',
         start_url: '/',
         background_color: '#E52321',
         theme_color: '#E52321',
-        display: 'minimal-ui',
+        display: 'standalone',
         icon: 'src/images/headerImage.png', // This path is relative to the root of the site.
+        include_favicon: true,
       },
     },
     'gatsby-plugin-offline',
