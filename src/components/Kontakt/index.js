@@ -98,7 +98,7 @@ class KontaktForm extends Component {
 
         const {name, email, phone, subject, message  } = this.state;
         
-        fetch("/kontakterfolg", {
+        fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...{name, email, phone, subject, message} })

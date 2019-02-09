@@ -8,9 +8,13 @@ import Insel from '../components/Insel'
 import SimpleSlider from '../components/SimpleSlider'
 import Hausmeister from '../components/Hausmeister/'
 import Link from 'gatsby-link'
-
+import Helmet from 'react-helmet'
 const IndexPage = ({data}) => (
   <Layout>
+    <Helmet>
+      <title>WoS Hausmeister & Reinigung Service auf Föhr</title>
+      <meta name="description" content="WoS Hausmeister & Reinigung Service auf Föhr. Wir bieten Dienstleistungen wie Reinigungsdienst, Gartenpflege, Hausarbeit und mehr." />
+    </Helmet>
     <MainImage></MainImage>
     <MainText></MainText>
 

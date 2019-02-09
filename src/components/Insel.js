@@ -226,9 +226,14 @@ const Insel = () => (
 
     render = {data => (
         <Wrapper>
-            {/* <h3 style={{position:'relative',color: 'black', backgroundColor:'red'}}>Föhr</h3> */}
             <InselImg  fluid={data.file.childImageSharp.fluid} />
+
             <Content>
+                <p>
+                    Unsere Dienstleistungen 
+                    decken die gesamte Insel
+                    Föhr ab!
+                </p>
                 <Link to={'/kontakt'} style={{textDecoration: 'none'}}>
                     <Button1>
                         <RelativeDiv>
