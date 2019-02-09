@@ -13,6 +13,74 @@ export const Wrapper = styled.div`
     z-index: 0;
     color: #707070;
 
+    .sentMessage{
+        position: fixed;
+        top: 0px;
+        z-index: 9999;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        height: 100px !important;
+        width: 100%;
+        text-align: center;
+        /* background-color: white; */
+        /* background-color: #00ff83; */
+        background-color: lightblue;
+        transition: height 0.5s ease;
+        
+        p{
+            font-size: 1.1rem;
+            margin-left: 1rem;
+            position: relative;
+            top: 12px;
+            display: block !important;
+        }
+
+        .cross{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            /* background-color: #E52321; */
+            background-color: #0a5d84;
+            margin: 1rem;
+
+            -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ${this}:hover{
+                cursor: pointer;
+            }
+        }
+
+        .cross div {
+            width: 30px;
+            height: 5px;
+            margin: 0.1rem;
+            background-color: white;                            
+
+            ${this}:nth-child(1){
+                position: relative;
+                left: 12px;
+                top: 0px;
+                transform: rotate(135deg);
+            }
+
+            ${this}:nth-child(2){
+                position: relative;
+                left: -12px;
+                top: 0px;
+                transform: rotate(-135deg);
+            }
+        }
+    }
+
     h3 {
         margin-top: 100px;
     }
@@ -127,3 +195,8 @@ export const Wrapper = styled.div`
     }
 `
 
+export const Message = styled.div`
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+`
