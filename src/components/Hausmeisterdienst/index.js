@@ -4,7 +4,6 @@ import * as El from './style'
 
 class index extends Component {
     render() {
-        console.log(this.props.data)
         return (
             <El.Wrapper>
                 <El.LeftTop>
