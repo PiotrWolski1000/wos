@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Image from 'gatsby-image'
 import * as El from './style'
 import reinigungsImage from './../../images/cleaning.jpg'
 
 class index extends Component {
     render() {
-        // console.log(this.props.data)
         return (
             <El.Wrapper>
                 <El.LeftTop>

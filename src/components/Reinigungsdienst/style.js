@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
     z-index: 10;
     flex-direction: column;
     margin: 50px 0 0 0;
-    /* padding-top: 100px;  */
+  
     -moz-box-shadow:0 3px 3px rgba(182, 182, 182, 0.4);
     -webkit-box-shadow: 0 3px 3px rgba(182, 182, 182, 0.4);
     box-shadow: 0 3px 3px rgba(182, 182, 182, 0.4);
