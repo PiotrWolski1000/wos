@@ -49,7 +49,7 @@ const Q = styled.blockquote`
     font-size:2.4em;
     color: black;    
     position: relative;
-    top: 2.0rem;
+    top: 2.9rem;
     left: 0.3rem;
   }
   

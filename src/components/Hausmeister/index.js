@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import * as El from './style'
-import Img from 'gatsby-image'
-import Link from 'gatsby-link'
 import hausmeisterImage from './../../images/wrench.jpg'
 
 
 class index extends Component {
-    constructor(props){
-        super(props)    
-    }
-
     render() {
         return (
             <El.Wrapper>

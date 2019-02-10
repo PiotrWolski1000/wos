@@ -6,11 +6,11 @@ const Wrapper = styled.div`
     display: block; 
     height: auto;
     width: 100%;
-    
+
     margin: 2rem 0 0.5rem 0;
     font-size: 1.4rem;
     padding: 0rem 1rem 0rem 1rem;
-    
+
     @media(min-width: 768px){
         font-size: 2rem;
         line-height: 2rem;
@@ -19,32 +19,39 @@ const Wrapper = styled.div`
         display: block;
         margin: 0 auto;
         width: 80%;
-        text-align: left;
+        /* text-align: left; */
         color: #707070;
-        text-justify: left;
         text-indent: 2rem;
 
     }
-
 `
+const StyledGatsbyLink = styled(Link)`
+    text-decoration: none;
+    ${this}:visited{
+        color: #E52321;
+    }
+    ${this}:link{
+        color: black;
+    }
+    ${this}:active{
+        color: #E52321;
+    }
+    ${this}:hover{
+        text-decoration: underline;
+    }
+`
+
+
 const MainText = () => (
   <Wrapper>
         <p>
             Hier finden Sie alle Informationen über unsere Dienstleistungen, die Sie
             {" "} 
-            <Link to='/leistungen'>
+            <StyledGatsbyLink to='/leistungen' >
                 hier 
-            </Link>
+            </StyledGatsbyLink>
             {" "}
             überprüfen können.
-        </p>
-        <p style={{marginTop: '3rem'}}>
-            Für weitere Informationen kontaktieren Sie uns bitte. Die Kontaktdaten finden Sie 
-            auf unserer {' '}
-            <Link to='/kontakt'>
-                Kontaktseite
-            </Link>
-            .
         </p>
   </Wrapper>
 )

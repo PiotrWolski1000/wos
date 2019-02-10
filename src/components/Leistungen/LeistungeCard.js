@@ -67,7 +67,7 @@ export default class LeistungeCard extends React.Component {
         return(
             <CardWrapper>
                 <Left>
-                    <Img fluid={this.props.image}/>
+                    <Img fluid={this.props.image} alt={this.props.alt}/>
                 </Left>
                 <Right>
                     <H2>
