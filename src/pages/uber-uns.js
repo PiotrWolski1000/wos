@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import Hausmeister from '../components/Hausmeister/'
 import Layout from '../components/layout'
 import {graphql} from 'gatsby'
