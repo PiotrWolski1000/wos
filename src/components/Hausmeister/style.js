@@ -53,9 +53,6 @@ export const Right = styled.div`
     padding: 10rem;
     
 
-    
-    background-color: green;
-    
     background-image: url(${props => props.src});
     background-repeat: no-repeat;
     background-size: cover;
