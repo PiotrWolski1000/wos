@@ -31,7 +31,7 @@ const StyledGatsbyLink = styled(Link)`
         color: #E52321;
     }
     ${this}:link{
-        color: black;
+        color: #E52321;
     }
     ${this}:active{
         color: #E52321;
