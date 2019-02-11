@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Image from 'gatsby-image'
 import * as El from './style'
 import reinigungsImage from './../../images/cleaning.jpg'
 
 class index extends Component {
     render() {
-        // console.log(this.props.data)
         return (
             <El.Wrapper>
                 <El.LeftTop>
@@ -13,7 +11,6 @@ class index extends Component {
                     <div>
                         <ul>
                             <li>Büro-, Haus-, Ferienobjektenreinigung</li>
-                            <li>Ferienobjektenreinigung</li>
                             <li>Bauschlussreinigung</li>
                             <li>Grundreinigung</li>
                         </ul>

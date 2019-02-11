@@ -10,12 +10,11 @@ export const ContentWrapper = styled.div`
     flex-direction: column;
     min-height: 500px;
 
-    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 3px 3px rgba(182, 182, 182, 0.4);
+    -webkit-box-shadow: 0 3px 3px rgba(182, 182, 182, 0.4);
+    box-shadow: 0 3px 3px rgba(182, 182, 182, 0.4);
 
     @media(min-width: 768px){
-        border-top: 2px solid rgba(0,0,0,0.2);
         flex-direction: row;
     }
 `

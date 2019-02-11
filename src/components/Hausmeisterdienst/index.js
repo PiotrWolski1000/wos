@@ -4,11 +4,10 @@ import * as El from './style'
 
 class index extends Component {
     render() {
-        console.log(this.props.data)
         return (
             <El.Wrapper>
                 <El.LeftTop>
-                    <h2>Hausmeister</h2>
+                    <h2>Hausmeisterdienst</h2>
                     <div>
                         <ul>
                             <li>Kleine Reparatur und Montagearbeiten</li>
