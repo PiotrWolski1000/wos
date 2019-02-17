@@ -53,7 +53,6 @@ const Content = styled.div`
     justify-content: space-around;
     align-items: center; 
     p {
-        /* text-align: justify; */
         color: #707070;
         font-size: 1.5rem;
         line-height: 1.5rem;

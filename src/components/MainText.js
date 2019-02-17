@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
     display: block; 
     height: auto;
     width: 100%;
@@ -44,6 +44,11 @@ const StyledGatsbyLink = styled(Link)`
 
 const MainText = () => (
   <Wrapper>
+
+        <h1 style={{textAlign: 'center', marginTop: '50px'}}>
+        WoS Reinigungs & Hausmeister Service 
+        </h1>
+    
         <p>
             Hier finden Sie alle Informationen über unsere Dienstleistungen, die Sie
             {" "} 

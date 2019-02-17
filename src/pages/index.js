@@ -7,7 +7,7 @@ import SimpleSlider from '../components/SimpleSlider'
 import Helmet from 'react-helmet'
 import Reinigungsdienst from '../components/Reinigungsdienst/'
 import Hausmeisterdienst from '../components/Hausmeisterdienst/'
-
+import Friends from '../components/Friends'
 const IndexPage = ({data}) => (
   <Layout>
     <Helmet>
@@ -18,14 +18,17 @@ const IndexPage = ({data}) => (
     <MainImage></MainImage>
     
 
+
     <MainText></MainText>
     
+
     <Hausmeisterdienst/>
     <Reinigungsdienst/>
 
     <Insel/>
      <div style={{width: '100%'}}>
       <SimpleSlider/>
+      <Friends/>
     </div>
   </Layout>
 )
