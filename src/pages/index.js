@@ -22,13 +22,13 @@ const IndexPage = ({data}) => (
     <MainText></MainText>
     
 
-    <Hausmeisterdienst/>
     <Reinigungsdienst/>
+    {/* <Hausmeisterdienst/> */}
 
     <Insel/>
      <div style={{width: '100%'}}>
-      <SimpleSlider/>
       <Friends/>
+      <SimpleSlider/>
     </div>
   </Layout>
 )
