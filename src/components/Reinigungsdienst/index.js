@@ -11,6 +11,7 @@ class index extends Component {
                     <div>
                         <ul>
                             <li>Büro-, Haus-, Ferienobjektenreinigung</li>
+                            <li>Praxis</li>
                             <li>Bauschlussreinigung</li>
                             <li>Grundreinigung</li>
                         </ul>

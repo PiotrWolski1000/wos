@@ -6,7 +6,7 @@ const UnsereLeistungen = (data) => {
     const Description = [
       {
         title: 'Reinigungsdienst',
-        jobs: ['Büro-, Haus-, Ferienobjektenreinigung', 'Bauschlussreinigung', 'Grundreinigung'],
+        jobs: ['Büro-, Haus-, Ferienobjektenreinigung', 'Praxis' ,'Bauschlussreinigung', 'Grundreinigung'],
         image: data.data.data.image2.childImageSharp.fluid,
         alt: 'Reinigungsdienst Image',
         id: 2,
@@ -25,14 +25,14 @@ const UnsereLeistungen = (data) => {
         alt: 'Hausarbeit Image',
         id: 1,
       },
-      {
-        title: 'Gartenpflege',
-        jobs: ['Gartenpflege', 'Mülltonendienst', 'Hauswirtschaft', ],
-        image: data.data.data.image3.childImageSharp.fluid,
-        alt: 'Gartenpflege Image',
-        id: 3,
+      // {
+      //   title: 'Gartenpflege',
+      //   jobs: ['Gartenpflege', 'Mülltonendienst', 'Hauswirtschaft', ],
+      //   image: data.data.data.image3.childImageSharp.fluid,
+      //   alt: 'Gartenpflege Image',
+      //   id: 3,
 
-      },
+      // },
     ]
     return(
     <El.Wrapper>
