@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     box-shadow: 0px 1px 13px grey;
     position: relative;
     font-size: 2em;
+
 `
 
 const Text = styled.div`
@@ -20,6 +21,8 @@ const Text = styled.div`
     color: white;
     margin-left: 0.5em;
     h2 {
+        background-color: rgba(255,0,0, 0.7);
+        
         font-size: 2rem;
     }
 
@@ -47,9 +50,9 @@ const MainImage = () => (
   <StaticQuery
     query = {graphql`
     query MainImageQuery {
-        file(relativePath: {eq: "garden.jpg"}) {
+        file(relativePath: {eq: "fohr-haus.jpg"}) {
             childImageSharp {
-                fluid(maxWidth: 1920) {
+                fluid(maxWidth: 1200) {
                   ...GatsbyImageSharpFluid
                 }
             }
